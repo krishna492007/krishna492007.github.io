@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR HUB: Barcode & QR Scanner Studio - Official Website & Privacy Policy</title>
+    <meta name="description" content="Official website and privacy policy for QR HUB: Barcode & QR Scanner Android Application by Krishna Tech Hub.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0A0A0D;
+            --surface: #14141B;
+            --surface-elevated: #1D1E27;
+            --gold-primary: #D9A257;
+            --gold-soft: #EFCC8F;
+            --gold-dim: rgba(217, 162, 87, 0.15);
+            --gold-border: rgba(217, 162, 87, 0.3);
+            --text-primary: #F1EFEA;
+            --text-secondary: #94949E;
+            --text-muted: #5C5D66;
+            --border: rgba(255, 255, 255, 0.08);
+            --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 30px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gold-dim);
+            border: 1px solid var(--gold-border);
+            color: var(--gold-soft);
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #FFFFFF 0%, #D9A257 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 17px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #D9A257 0%, #EFCC8F 100%);
+            color: #1A1208;
+            padding: 14px 28px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 20px rgba(217, 162, 87, 0.25);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(217, 162, 87, 0.4);
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .card-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: var(--gold-dim);
+            border: 1px solid var(--gold-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-soft);
+            font-size: 18px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--gold-soft);
+            margin: 20px 0 8px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 14px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 16px;
+        }
+
+        li {
+            color: var(--text-secondary);
+            font-size: 14.5px;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 24px;
+        }
+
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold-primary);
+            font-weight: bold;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .feature-box {
+            background: var(--surface-elevated);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px;
+        }
+
+        .feature-box h4 {
+            color: var(--text-primary);
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .feature-box p {
+            font-size: 13.5px;
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 13.5px;
+        }
+
+        footer a {
+            color: var(--gold-primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            .card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="badge">✨ Verified Android Application</div>
+            <h1>QR HUB: Scanner & Studio</h1>
+            <p class="tagline">All-in-one ultra-fast QR scanner, product barcode studio, 1-tap UPI payment launcher, and custom QR designer built with 100% privacy.</p>
+            <a href="https://github.com/krishna492007/QR_HUB" class="cta-btn" target="_blank" rel="noopener">
+                <span>View on GitHub</span> →
+            </a>
+        </header>
+
+        <!-- PRIVACY POLICY SECTION -->
+        <section id="privacy" class="card">
+            <div class="card-header">
+                <div class="card-icon">🛡️</div>
+                <h2>Official Privacy Policy</h2>
+            </div>
+            <p><strong>Last Updated: August 2026</strong></p>
+            <p>At <strong>QR HUB</strong> (developed by <em>Krishna Tech Hub</em>), your privacy is our top priority. We believe in total data sovereignty — your data belongs to you and remains on your device.</p>
+
+            <h3>1. Zero Personal Data Collection</h3>
+            <p>QR HUB does not collect, sell, or store any personal identifiers, contact details, scanned content, or browsing history on external servers. All operations (scanning, generating, history logs) execute locally offline on your device.</p>
+
+            <h3>2. App Permissions & Usage Rationale</h3>
+            <ul>
+                <li><strong>Camera Access (CAMERA):</strong> Required exclusively for real-time computer vision barcode and QR scanning. Video frames are analyzed in memory and immediately discarded.</li>
+                <li><strong>Photos / Media Access (READ_MEDIA_IMAGES):</strong> Used only when you intentionally pick an image from your gallery to scan a QR code.</li>
+                <li><strong>Wi-Fi State Access (CHANGE_WIFI_STATE):</strong> Used only to automatically connect your device to a network when you scan a valid Wi-Fi QR code.</li>
+                <li><strong>Internet Access (INTERNET):</strong> Required for displaying advertisement banners and interstitials via certified ad networks.</li>
+            </ul>
+
+            <h3>3. Third-Party Advertising Partners</h3>
+            <p>To keep QR HUB 100% free, we integrate industry-standard compliant advertising networks that may collect anonymized advertising IDs in accordance with their privacy policies:</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color: var(--gold-primary);">Google Privacy & Terms</a></li>
+                <li><strong>Start.io (StartApp):</strong> <a href="https://www.start.io/policy/privacy-policy/" target="_blank" rel="noopener" style="color: var(--gold-primary);">Start.io Privacy Policy</a></li>
+            </ul>
+
+            <h3>4. Security & Offline Storage</h3>
+            <p>Your scan and generate history is stored locally in an encrypted Room SQLite database on your device. You can clear your complete history at any time with a single tap.</p>
+
+            <h3>5. Contact & Support</h3>
+            <p>If you have any questions or feedback regarding this Privacy Policy, feel free to contact us:</p>
+            <p>📧 <strong>Email:</strong> <a href="mailto:vishesh040907@gmail.com" style="color: var(--gold-primary);">vishesh040907@gmail.com</a><br>
+            🏢 <strong>Developer:</strong> Krishna Tech Hub<br>
+            🌐 <strong>Source Code:</strong> <a href="https://github.com/krishna492007/QR_HUB" style="color: var(--gold-primary);">github.com/krishna492007/QR_HUB</a></p>
+        </section>
+
+        <!-- APP FEATURES HIGHLIGHT -->
+        <section class="card">
+            <div class="card-header">
+                <div class="card-icon">⚡</div>
+                <h2>Key Highlights & Features</h2>
+            </div>
+            <div class="grid-2">
+                <div class="feature-box">
+                    <h4>💳 1-Tap UPI Quick Pay</h4>
+                    <p>Instant direct launch into PhonePe, Google Pay, Paytm, or BHIM from any scanned UPI QR code.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>🎨 Custom QR Designer</h4>
+                    <p>Create branded QR codes with custom colors, dot shapes, leaf eyes, and central logo embedding.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>📊 Barcode & Sticker Sheets</h4>
+                    <p>Generate Code-128, EAN-13, and UPC-A barcodes with precut multi-page A4 sticker printable PDF export.</p>
+                </div>
+                <div class="feature-box">
+                    <h4>🔒 Safe-Browsing Inspector</h4>
+                    <p>Inspects HTTPS SSL certs, unmasks shortlinks, and warns against malicious APK downloads.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 QR HUB by Krishna Tech Hub. All rights reserved.</p>
+            <p style="margin-top: 6px;">
+                <a href="#privacy">Privacy Policy</a> • 
+                <a href="app-ads.txt" target="_blank">app-ads.txt</a> • 
+                <a href="https://github.com/krishna492007/QR_HUB" target="_blank" rel="noopener">GitHub Repository</a>
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
