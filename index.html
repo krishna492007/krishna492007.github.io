@@ -3,226 +3,1369 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101a35">
-  <meta name="description" content="Official developer website for PDF HUB, ScrollCount, and QR HUB. Find app information, privacy policies, terms, and support links.">
-  <meta property="og:title" content="Krishna Apps — Official Developer Website">
-  <meta property="og:description" content="App information, privacy policies, terms, and support for PDF HUB, ScrollCount, and QR HUB.">
+  <meta name="theme-color" content="#07090e">
+  <meta name="description" content="Krishna Tech Hub — Official developer website for PDF Hub, QR Hub, and ScrollCount. Fast, private, offline-first Android productivity and utility apps.">
+  <meta property="og:title" content="Krishna Tech Hub — Modern &amp; Private Android Apps">
+  <meta property="og:description" content="Official home of PDF Hub, QR Hub, and ScrollCount. 100% private, offline-first Android utilities designed for everyday productivity.">
   <meta property="og:type" content="website">
-  <title>Krishna Apps — Official Developer Website</title>
+  <meta property="og:url" content="https://krishna492007.github.io/">
+  <title>Krishna Tech Hub — Official Developer Website</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      color-scheme: light;
-      --ink: #17213b;
-      --muted: #63708a;
-      --navy: #101a35;
-      --blue: #5577f5;
-      --line: #e5eaf4;
-      --surface: #ffffff;
-      --surface-soft: #f6f8fc;
-      --mint: #b8f2dc;
-      --radius: 22px;
-      --shadow: 0 20px 60px rgba(20, 34, 70, .09);
+      --bg-dark: #07090e;
+      --bg-surface: #0e121b;
+      --bg-card: rgba(18, 24, 38, 0.72);
+      --bg-card-hover: rgba(26, 34, 52, 0.85);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-highlight: rgba(255, 255, 255, 0.16);
+
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      --accent-blue: #3b82f6;
+      --accent-cyan: #06b6d4;
+      --accent-red: #ef4444;
+      --accent-gold: #f59e0b;
+      --accent-purple: #8b5cf6;
+      --accent-emerald: #10b981;
+
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+
+      --blur-glass: blur(16px);
+      --shadow-card: 0 16px 40px -12px rgba(0, 0, 0, 0.6);
+      --shadow-glow-red: 0 0 35px -8px rgba(239, 68, 68, 0.35);
+      --shadow-glow-gold: 0 0 35px -8px rgba(245, 158, 11, 0.35);
+      --shadow-glow-purple: 0 0 35px -8px rgba(139, 92, 246, 0.35);
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background: #f7f9fd;
-      color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
       line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
       -webkit-font-smoothing: antialiased;
+      background-image:
+        radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 90% 25%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 10% 65%, rgba(6, 182, 212, 0.06) 0%, transparent 45%);
     }
-    a { color: inherit; }
-    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-    .topbar { padding: 22px 0; }
-    .nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
-    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; letter-spacing: -.03em; }
-    .brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 14px; background: linear-gradient(140deg, #6b8cff, #8c6cf2); color: white; font-size: 17px; box-shadow: 0 8px 22px rgba(88, 113, 241, .28); }
-    .brand-copy { display: flex; flex-direction: column; line-height: 1.1; }
-    .brand-copy small { margin-top: 5px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-    .nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
-    .nav-links a { color: #505d78; text-decoration: none; font-size: 14px; font-weight: 650; }
-    .nav-links a:hover, .text-link:hover { color: var(--blue); }
-    .hero { position: relative; overflow: hidden; margin-top: 14px; padding: clamp(42px, 7vw, 82px); border-radius: 34px; color: #fff; background: radial-gradient(circle at 87% 12%, rgba(133, 116, 255, .8), transparent 26%), radial-gradient(circle at 14% 100%, rgba(74, 213, 188, .2), transparent 34%), linear-gradient(118deg, #111b38 0%, #243563 58%, #313c79 100%); box-shadow: 0 24px 70px rgba(19, 32, 68, .19); }
-    .hero::after { content: ""; position: absolute; right: 7%; top: 19%; width: 230px; height: 230px; border: 1px solid rgba(255,255,255,.16); border-radius: 42%; transform: rotate(28deg); box-shadow: 0 0 0 24px rgba(255,255,255,.035), 0 0 0 48px rgba(255,255,255,.025); pointer-events: none; }
-    .hero-content { position: relative; z-index: 1; max-width: 690px; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; background: rgba(255,255,255,.08); color: #e2eaff; font-size: 12px; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
-    .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 12px rgba(184,242,220,.7); }
-    h1 { margin: 22px 0 14px; max-width: 700px; font-size: clamp(38px, 6.2vw, 68px); line-height: 1.04; letter-spacing: -.055em; }
-    .hero p { max-width: 630px; margin: 0; color: #d8e0f7; font-size: clamp(16px, 2.1vw, 19px); }
-    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 28px; }
-    .button { display: inline-flex; justify-content: center; align-items: center; gap: 9px; min-height: 46px; padding: 11px 17px; border: 1px solid transparent; border-radius: 13px; font-size: 14px; font-weight: 750; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
-    .button:hover { transform: translateY(-2px); }
-    .button-primary { background: #fff; color: #1a2850; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
-    .button-glass { border-color: rgba(255,255,255,.25); color: white; background: rgba(255,255,255,.08); }
-    .section { padding: 70px 0 0; }
-    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
-    .section-kicker { margin: 0 0 8px; color: #5b73da; font-size: 12px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
-    h2 { margin: 0; font-size: clamp(28px, 4vw, 39px); line-height: 1.16; letter-spacing: -.04em; }
-    .section-desc { max-width: 470px; margin: 0; color: var(--muted); font-size: 15px; }
-    .app-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
-    .app-card { display: flex; flex-direction: column; min-height: 330px; padding: 25px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: 0 10px 30px rgba(28, 43, 82, .035); }
-    .app-top { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
-    .app-icon { display: grid; place-items: center; flex: 0 0 56px; width: 56px; height: 56px; border-radius: 18px; color: #fff; font-size: 22px; font-weight: 850; letter-spacing: -.04em; }
-    .icon-pdf { background: linear-gradient(145deg, #ff777a, #d94159); }
-    .icon-scroll { background: linear-gradient(145deg, #39c9ad, #1987a5); }
-    .icon-qr { background: linear-gradient(145deg, #8b7aff, #4b56c9); }
-    .app-label { margin: 0 0 3px; color: #75819a; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-    h3 { margin: 0; font-size: 21px; line-height: 1.2; letter-spacing: -.03em; }
-    .app-description { margin: 0 0 22px; color: var(--muted); font-size: 14px; }
-    .feature-list { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 24px; padding: 0; list-style: none; }
-    .feature-list li { padding: 6px 9px; border-radius: 9px; background: var(--surface-soft); color: #596780; font-size: 11px; font-weight: 700; }
-    .app-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 18px; border-top: 1px solid #eef1f7; }
-    .text-link { display: inline-flex; align-items: center; gap: 6px; color: #394a7a; text-decoration: none; font-size: 12px; font-weight: 800; }
-    .arrow { font-size: 16px; line-height: 1; }
-    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .info-card { padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
-    .info-icon { display: grid; place-items: center; width: 43px; height: 43px; margin-bottom: 16px; border-radius: 14px; background: #eef1ff; color: #5667d9; font-size: 19px; }
-    .info-card p { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
-    .info-card a { font-weight: 750; text-decoration-color: #b5c0e7; text-underline-offset: 3px; }
-    .notice { margin-top: 24px; padding: 17px 20px; border: 1px solid #e5eaf4; border-radius: 15px; background: #f0f4fb; color: #53617d; font-size: 13px; }
-    footer { margin-top: 74px; padding: 27px 0 35px; border-top: 1px solid var(--line); }
-    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
-    .footer-brand { font-size: 13px; font-weight: 800; }
-    .footer-copy { color: #7b879d; font-size: 12px; }
-    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
-    .footer-links a { color: #64718b; font-size: 12px; font-weight: 700; text-decoration: none; }
-    .footer-links a:hover { color: var(--blue); }
-    @media (max-width: 860px) {
-      .app-grid { grid-template-columns: 1fr 1fr; }
-      .hero::after { right: -6%; }
-      .section-head { align-items: start; flex-direction: column; }
+
+    /* Ambient background grid */
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      pointer-events: none;
+      z-index: 0;
     }
-    @media (max-width: 620px) {
-      .wrap { width: min(100% - 28px, 1120px); }
-      .topbar { padding: 15px 0; }
-      .nav { align-items: flex-start; }
-      .nav-links { justify-content: flex-end; gap: 10px 14px; padding-top: 7px; }
-      .nav-links a { font-size: 12px; }
-      .brand-mark { width: 38px; height: 38px; }
-      .brand-copy { font-size: 13px; }
-      .brand-copy small { font-size: 9px; }
-      .hero { padding: 34px 25px; border-radius: 25px; }
-      .hero::after { right: -115px; top: 30%; width: 200px; height: 200px; }
-      .app-grid, .info-grid { grid-template-columns: 1fr; }
-      .app-card { min-height: 0; padding: 22px; }
-      .section { padding-top: 54px; }
-      .footer-row { align-items: flex-start; flex-direction: column; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } }
+
+    .container {
+      width: min(1200px, calc(100% - 48px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header & Navigation */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: var(--blur-glass);
+      -webkit-backdrop-filter: var(--blur-glass);
+      background: rgba(7, 9, 14, 0.78);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: all 0.25s ease;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .brand-meta {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-title {
+      color: var(--text-main);
+      font-weight: 800;
+    }
+
+    .brand-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-link {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--text-main);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-highlight);
+      color: var(--text-main);
+      transition: all 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 90px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      color: #34d399;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      max-width: 860px;
+      margin: 0 auto 24px;
+      background: linear-gradient(180deg, #ffffff 30%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 26px;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.5);
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-highlight);
+      color: var(--text-main);
+      backdrop-filter: var(--blur-glass);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Trust highlights bar */
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 30px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      backdrop-filter: var(--blur-glass);
+      text-align: left;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .trust-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--accent-cyan);
+    }
+
+    .trust-text h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .trust-text p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Section Header */
+    .section-header {
+      text-align: center;
+      margin: 90px 0 45px;
+    }
+
+    .section-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--accent-blue);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* App Cards Grid */
+    .apps-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .app-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 38px;
+      backdrop-filter: var(--blur-glass);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .app-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-xl);
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent 60%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .app-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-4px);
+      border-color: var(--border-highlight);
+      box-shadow: var(--shadow-card);
+    }
+
+    /* Card Glow variants */
+    .app-card.pdf-hub:hover {
+      box-shadow: var(--shadow-glow-red);
+      border-color: rgba(239, 68, 68, 0.35);
+    }
+
+    .app-card.qr-hub:hover {
+      box-shadow: var(--shadow-glow-gold);
+      border-color: rgba(245, 158, 11, 0.35);
+    }
+
+    .app-card.scrollcount:hover {
+      box-shadow: var(--shadow-glow-purple);
+      border-color: rgba(139, 92, 246, 0.35);
+    }
+
+    .app-card-left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .app-meta-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .app-icon-wrapper {
+      width: 76px;
+      height: 76px;
+      border-radius: 20px;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .app-icon-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .app-heading-group h3 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .tag-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .tag-red {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #fca5a5;
+    }
+
+    .tag-gold {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fde68a;
+    }
+
+    .tag-purple {
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: #ddd6fe;
+    }
+
+    .app-subheading {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .app-package-code {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      border: 1px solid var(--border-subtle);
+      width: fit-content;
+    }
+
+    .app-desc-text {
+      font-size: 1.02rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    /* Feature tags grid */
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 18px;
+      list-style: none;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+
+    .feature-bullet {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--accent-cyan);
+      font-size: 0.7rem;
+    }
+
+    .pdf-bullet { color: #f87171; background: rgba(239, 68, 68, 0.12); }
+    .qr-bullet { color: #fbbf24; background: rgba(245, 158, 11, 0.12); }
+    .sc-bullet { color: #a78bfa; background: rgba(139, 92, 246, 0.12); }
+
+    /* Card Right Panel / Actions */
+    .app-card-right {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .store-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    }
+
+    .store-btn:hover {
+      background: #1e293b;
+      border-color: rgba(255, 255, 255, 0.35);
+      transform: translateY(-2px);
+      color: #38bdf8;
+    }
+
+    .store-btn svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
+    .legal-links-box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .legal-link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 6px 8px;
+      border-radius: var(--radius-sm);
+      transition: all 0.15s ease;
+    }
+
+    .legal-link-item:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .legal-link-item svg {
+      width: 14px;
+      height: 14px;
+      opacity: 0.6;
+    }
+
+    /* Philosophy / Standards Section */
+    .philosophy-section {
+      margin: 100px 0;
+      padding: 60px 40px;
+      background: linear-gradient(180deg, rgba(14, 18, 27, 0.8), rgba(10, 13, 20, 0.8));
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      backdrop-filter: var(--blur-glass);
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .pillar-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: all 0.25s ease;
+    }
+
+    .pillar-card:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: var(--border-highlight);
+      transform: translateY(-3px);
+    }
+
+    .pillar-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #60a5fa;
+      font-size: 1.25rem;
+      margin-bottom: 20px;
+    }
+
+    .pillar-card h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-main);
+    }
+
+    .pillar-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Developer & Compliance Section */
+    .compliance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    .compliance-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      backdrop-filter: var(--blur-glass);
+    }
+
+    .compliance-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .compliance-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: #10b981;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .compliance-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .compliance-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .code-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: #93c5fd;
+      border: 1px solid rgba(147, 197, 253, 0.2);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border-subtle);
+      background: rgba(5, 7, 11, 0.95);
+      padding: 60px 0 40px;
+      font-size: 0.88rem;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand-col {
+      max-width: 380px;
+    }
+
+    .footer-desc {
+      color: var(--text-dim);
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+
+    .footer-links-group {
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .footer-col h5 {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-main);
+      margin-bottom: 14px;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links-list a {
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .footer-links-list a:hover {
+      color: var(--accent-blue);
+    }
+
+    .footer-bottom {
+      padding-top: 28px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-dim);
+      font-size: 0.82rem;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .app-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px;
+      }
+      .app-card-right {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .store-btn {
+        flex: 1 1 240px;
+      }
+      .legal-links-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-top: none;
+        padding-top: 0;
+        gap: 14px;
+      }
+      .trust-strip {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+      .compliance-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: calc(100% - 32px);
+      }
+      .nav-links {
+        display: none;
+      }
+      .hero {
+        padding: 50px 0 35px;
+      }
+      .features-list {
+        grid-template-columns: 1fr;
+      }
+      .app-card {
+        padding: 24px;
+      }
+      .app-meta-header {
+        flex-direction: row;
+        gap: 16px;
+      }
+      .app-icon-wrapper {
+        width: 64px;
+        height: 64px;
+      }
+      .app-heading-group h3 {
+        font-size: 1.5rem;
+      }
+      .philosophy-section {
+        padding: 35px 20px;
+      }
+    }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="Krishna Apps home">
-        <span class="brand-mark" aria-hidden="true">K</span>
-        <span class="brand-copy">Krishna Apps<small>Independent developer</small></span>
+
+  <!-- Ambient grid overlay -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#top" class="brand" aria-label="Krishna Tech Hub Homepage">
+        <div class="brand-icon" aria-hidden="true">K</div>
+        <div class="brand-meta">
+          <span class="brand-title">Krishna Tech Hub</span>
+          <span class="brand-subtitle">Official Developer Hub</span>
+        </div>
       </a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#apps">Apps</a>
-        <a href="#about">About</a>
-        <a href="#support">Contact &amp; support</a>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#apps" class="nav-link">Our Apps</a>
+        <a href="#standards" class="nav-link">Our Standards</a>
+        <a href="#compliance" class="nav-link">Developer Info</a>
+        <a href="#support" class="nav-link">Contact</a>
       </nav>
+      <a href="https://github.com/krishna492007" target="_blank" rel="noopener noreferrer" class="nav-cta" aria-label="GitHub Profile">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
     </div>
   </header>
 
-  <main id="top" class="wrap">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <span class="eyebrow"><span class="eyebrow-dot"></span> Official developer website</span>
-        <h1 id="hero-title">Useful apps.<br>Thoughtfully made.</h1>
-        <p>Welcome to the official website for Krishna's Android apps. Find app details, privacy policies, terms of use, and support information in one place.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#apps">Explore the apps <span aria-hidden="true">↓</span></a>
-          <a class="button button-glass" href="#support">Contact &amp; support <span aria-hidden="true">↗</span></a>
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero container">
+      <div class="badge-pill">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span>Google Play Verified Developer</span>
+      </div>
+
+      <h1 class="hero-title">
+        High-Performance Android Apps.<br>Private &amp; Offline-First.
+      </h1>
+
+      <p class="hero-desc">
+        Welcome to the official developer portal for Krishna Tech Hub. We craft blazing-fast, distraction-free Android tools designed to keep your personal data strictly on your device.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#apps" class="btn btn-primary">
+          <span>Explore The 3 Apps</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <a href="#compliance" class="btn btn-secondary">
+          <span>Developer &amp; Policies</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+
+      <!-- Trust Strip -->
+      <div class="trust-strip">
+        <div class="trust-item">
+          <div class="trust-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="trust-text">
+            <h4>100% Offline-First</h4>
+            <p>Your documents, scans &amp; habits are processed locally. Zero remote cloud storage.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="trust-text">
+            <h4>Native Hardware Speed</h4>
+            <p>Powered by Google ML Kit and hardware acceleration for smooth 120 FPS performance.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div class="trust-text">
+            <h4>Zero Watermarks</h4>
+            <p>Clean exports on all PDF &amp; QR outputs. Professional, modern and ad-compliant.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="apps" class="section" aria-labelledby="apps-title">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">The app collection</p>
-          <h2 id="apps-title">Made for everyday tasks.</h2>
-        </div>
-        <p class="section-desc">Choose an app to find its official privacy policy and terms. These links point to the individual legal pages hosted on this website.</p>
+    <!-- Apps Showcase Section -->
+    <section id="apps" class="container" style="padding-top: 40px;">
+      <div class="section-header">
+        <p class="section-eyebrow">The Application Suite</p>
+        <h2 class="section-title">Built for Your Daily Workflow</h2>
+        <p class="section-subtitle">Select an application below to view features, install from Google Play, or read its official privacy policy.</p>
       </div>
 
-      <div class="app-grid">
-        <article class="app-card">
-          <div class="app-top">
-            <div class="app-icon icon-pdf" aria-hidden="true">PDF</div>
-            <div><p class="app-label">Document tools</p><h3>PDF HUB</h3></div>
+      <div class="apps-grid">
+
+        <!-- App 1: PDF HUB -->
+        <article class="app-card pdf-hub" id="pdf-hub">
+          <div class="app-card-left">
+            <div class="app-meta-header">
+              <div class="app-icon-wrapper">
+                <img src="assets/images/pdf-hub-icon.png" alt="PDF Hub App Icon" class="app-icon-img" loading="lazy">
+              </div>
+              <div class="app-heading-group">
+                <h3>
+                  <span>PDF Hub</span>
+                  <span class="tag-pill tag-red">All-in-One Studio</span>
+                </h3>
+                <p class="app-subheading">PDF Editor &amp; Image Toolkit</p>
+                <div class="app-package-code" title="Google Play Package Identifier">
+                  <span>ID:</span>
+                  <strong>com.pdfhub</strong>
+                </div>
+              </div>
+            </div>
+
+            <p class="app-desc-text">
+              A comprehensive mobile PDF suite to convert, merge, split, and optimize documents without relying on cloud services. Built for privacy, speed, and seamless daily productivity.
+            </p>
+
+            <ul class="features-list" aria-label="PDF Hub Key Features">
+              <li class="feature-item">
+                <span class="feature-bullet pdf-bullet">✓</span>
+                <span>Merge &amp; Split Multiple PDFs</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet pdf-bullet">✓</span>
+                <span>Convert Images to PDF &amp; PDF to JPG</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet pdf-bullet">✓</span>
+                <span>Smart PDF Compression (No Quality Loss)</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet pdf-bullet">✓</span>
+                <span>Unlock &amp; Password Protect Files</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet pdf-bullet">✓</span>
+                <span>On-Device OCR Text Extraction</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet pdf-bullet">✓</span>
+                <span>100% Offline &amp; No Output Watermarks</span>
+              </li>
+            </ul>
           </div>
-          <p class="app-description">A collection of practical PDF and image tools for managing everyday documents.</p>
-          <ul class="feature-list" aria-label="PDF HUB highlights"><li>Merge &amp; split</li><li>Compress</li><li>Convert</li><li>File tools</li></ul>
-          <div class="app-links">
-            <a class="text-link" href="pdf-hub-privacy-policy.html">Privacy policy <span class="arrow" aria-hidden="true">↗</span></a>
-            <a class="text-link" href="pdf-hub-terms.html">Terms of use <span class="arrow" aria-hidden="true">↗</span></a>
+
+          <div class="app-card-right">
+            <a href="https://play.google.com/store/apps/details?id=com.pdfhub" target="_blank" rel="noopener noreferrer" class="store-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3.609 1.814L13.793 12 3.61 22.186a2.38 2.38 0 0 1-.61-.954V2.768c.15-.36.368-.691.61-.954zm11.24 11.24l2.456 2.456-11.75 6.784 9.294-9.24zm0-2.108L5.555 1.706l11.75 6.784-2.456 2.456zm1.49 1.054l3.528 2.037a1.44 1.44 0 0 1 0 2.492l-3.528 2.037-2.174-2.174 2.174-2.392z"/>
+              </svg>
+              <span>Get on Google Play</span>
+            </a>
+
+            <div class="legal-links-box">
+              <a href="pdf-hub-privacy-policy.html" class="legal-link-item">
+                <span>Privacy Policy</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="app-card">
-          <div class="app-top">
-            <div class="app-icon icon-scroll" aria-hidden="true">SC</div>
-            <div><p class="app-label">Scroll tracking</p><h3>ScrollCount</h3></div>
+        <!-- App 2: QR HUB -->
+        <article class="app-card qr-hub" id="qr-hub">
+          <div class="app-card-left">
+            <div class="app-meta-header">
+              <div class="app-icon-wrapper">
+                <img src="assets/images/qr-hub-icon.png" alt="QR Hub App Icon" class="app-icon-img" loading="lazy">
+              </div>
+              <div class="app-heading-group">
+                <h3>
+                  <span>QR Hub</span>
+                  <span class="tag-pill tag-gold">120 FPS ML Kit</span>
+                </h3>
+                <p class="app-subheading">Ultimate QR &amp; Barcode Studio</p>
+                <div class="app-package-code" title="Google Play Package Identifier">
+                  <span>ID:</span>
+                  <strong>com.qr.hub</strong>
+                </div>
+              </div>
+            </div>
+
+            <p class="app-desc-text">
+              Lightning-fast scanner and professional designer studio. Scan QR and barcodes at 120 FPS using Google ML Kit, or create branded custom QR codes with unique logos, colors, and A4 printable label sheets.
+            </p>
+
+            <ul class="features-list" aria-label="QR Hub Key Features">
+              <li class="feature-item">
+                <span class="feature-bullet qr-bullet">✓</span>
+                <span>120 FPS Ultra-Fast Scanner (Google ML Kit)</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet qr-bullet">✓</span>
+                <span>Custom Designer QR Studio (Logos, Frames &amp; Colors)</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet qr-bullet">✓</span>
+                <span>1D Barcode Studio &amp; Pre-cut A4 Sticker Printing</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet qr-bullet">✓</span>
+                <span>Instant Wi-Fi, Contacts (vCard), URLs &amp; SMS</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet qr-bullet">✓</span>
+                <span>Offline Batch Scanning &amp; History CSV Export</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet qr-bullet">✓</span>
+                <span>100% Private, Secure by Design &amp; Zero Tracking</span>
+              </li>
+            </ul>
           </div>
-          <p class="app-description">A simple utility designed to help users keep track of scrolling activity.</p>
-          <ul class="feature-list" aria-label="ScrollCount highlights"><li>Scroll tracking</li><li>Activity insights</li><li>Simple utility</li></ul>
-          <div class="app-links">
-            <a class="text-link" href="scrollcount-privacy-policy.html">Privacy policy <span class="arrow" aria-hidden="true">↗</span></a>
-            <a class="text-link" href="scrollcount-terms.html">Terms of use <span class="arrow" aria-hidden="true">↗</span></a>
+
+          <div class="app-card-right">
+            <a href="https://play.google.com/store/apps/details?id=com.qr.hub" target="_blank" rel="noopener noreferrer" class="store-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3.609 1.814L13.793 12 3.61 22.186a2.38 2.38 0 0 1-.61-.954V2.768c.15-.36.368-.691.61-.954zm11.24 11.24l2.456 2.456-11.75 6.784 9.294-9.24zm0-2.108L5.555 1.706l11.75 6.784-2.456 2.456zm1.49 1.054l3.528 2.037a1.44 1.44 0 0 1 0 2.492l-3.528 2.037-2.174-2.174 2.174-2.392z"/>
+              </svg>
+              <span>Get on Google Play</span>
+            </a>
+
+            <div class="legal-links-box">
+              <a href="qr-hub-privacy-policy.html" class="legal-link-item">
+                <span>Privacy Policy</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
+              <a href="qr-hub-terms.html" class="legal-link-item">
+                <span>Terms of Use</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="app-card">
-          <div class="app-top">
-            <div class="app-icon icon-qr" aria-hidden="true">QR</div>
-            <div><p class="app-label">Scan &amp; create</p><h3>QR HUB</h3></div>
+        <!-- App 3: SCROLLCOUNT -->
+        <article class="app-card scrollcount" id="scrollcount">
+          <div class="app-card-left">
+            <div class="app-meta-header">
+              <div class="app-icon-wrapper">
+                <img src="assets/images/scrollcount-icon.png" alt="ScrollCount App Icon" class="app-icon-img" loading="lazy">
+              </div>
+              <div class="app-heading-group">
+                <h3>
+                  <span>ScrollCount</span>
+                  <span class="tag-pill tag-purple">Digital Wellbeing</span>
+                </h3>
+                <p class="app-subheading">Reels &amp; Shorts Usage Tracker</p>
+                <div class="app-package-code" title="Google Play Package Identifier">
+                  <span>ID:</span>
+                  <strong>com.techhub.scrollcount</strong>
+                </div>
+              </div>
+            </div>
+
+            <p class="app-desc-text">
+              Reclaim your focus and time from endless scrolling. ScrollCount monitors your Reels and Shorts viewing sessions in real time, giving you clear analytics and mindful nudges to build healthier digital habits.
+            </p>
+
+            <ul class="features-list" aria-label="ScrollCount Key Features">
+              <li class="feature-item">
+                <span class="feature-bullet sc-bullet">✓</span>
+                <span>Automatic Scroll Counting on Reels &amp; Shorts</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet sc-bullet">✓</span>
+                <span>Daily &amp; Weekly Screen Time Insights</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet sc-bullet">✓</span>
+                <span>Mindful Session Limits &amp; Break Reminders</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet sc-bullet">✓</span>
+                <span>Battery-Optimized Background Engine</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet sc-bullet">✓</span>
+                <span>100% On-Device Statistics (No Account Needed)</span>
+              </li>
+              <li class="feature-item">
+                <span class="feature-bullet sc-bullet">✓</span>
+                <span>Clean &amp; Minimalist Visual Trend Charts</span>
+              </li>
+            </ul>
           </div>
-          <p class="app-description">Tools to scan QR codes and barcodes, create custom QR designs, and work with common QR tasks.</p>
-          <ul class="feature-list" aria-label="QR HUB highlights"><li>QR scanner</li><li>QR generator</li><li>Barcode tools</li><li>Wi-Fi QR</li></ul>
-          <div class="app-links">
-            <a class="text-link" href="qr-hub-privacy-policy.html">Privacy policy <span class="arrow" aria-hidden="true">↗</span></a>
-            <a class="text-link" href="qr-hub-terms.html">Terms of use <span class="arrow" aria-hidden="true">↗</span></a>
+
+          <div class="app-card-right">
+            <a href="https://play.google.com/store/apps/details?id=com.techhub.scrollcount" target="_blank" rel="noopener noreferrer" class="store-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3.609 1.814L13.793 12 3.61 22.186a2.38 2.38 0 0 1-.61-.954V2.768c.15-.36.368-.691.61-.954zm11.24 11.24l2.456 2.456-11.75 6.784 9.294-9.24zm0-2.108L5.555 1.706l11.75 6.784-2.456 2.456zm1.49 1.054l3.528 2.037a1.44 1.44 0 0 1 0 2.492l-3.528 2.037-2.174-2.174 2.174-2.392z"/>
+              </svg>
+              <span>Get on Google Play</span>
+            </a>
+
+            <div class="legal-links-box">
+              <a href="scrollcount-privacy-policy.html" class="legal-link-item">
+                <span>Privacy Policy</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
+            </div>
           </div>
         </article>
+
       </div>
-      <p class="notice">Legal links open separate pages. Please check that each linked file exists in the repository and is published before using this website as the developer website in Google Play Console.</p>
     </section>
 
-    <section id="about" class="section" aria-labelledby="about-title">
-      <div class="section-head">
-        <div><p class="section-kicker">About</p><h2 id="about-title">Built with clarity in mind.</h2></div>
+    <!-- Standards & Philosophy Section -->
+    <section id="standards" class="container">
+      <div class="philosophy-section">
+        <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+          <p class="section-eyebrow">Our Core Principles</p>
+          <h2 class="section-title">Designed with Ethics &amp; Integrity</h2>
+          <p class="section-subtitle">We believe mobile utilities should empower users, not exploit their attention or harvest their private data.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">🔒</div>
+            <h4>Strict Local Privacy</h4>
+            <p>Every file you convert, barcode you scan, or activity you track stays confined to your phone's sandbox storage. No hidden server uploads or third-party data selling.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">⚡</div>
+            <h4>Lightweight Architecture</h4>
+            <p>Zero background battery drain. Minimal APK sizes, instant cold starts, and hardware-accelerated rendering using modern Android Jetpack libraries.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box" aria-hidden="true">💎</div>
+            <h4>No Dark Patterns</h4>
+            <p>No forced full-screen subscription walls or deceptive interfaces. Transparent permissions, direct offline functionality, and clean outputs without forced branding.</p>
+          </div>
+        </div>
       </div>
-      <div class="info-grid">
-        <article class="info-card">
-          <div class="info-icon" aria-hidden="true">✦</div>
-          <h3>About the developer</h3>
-          <p>This website is maintained by Krishna and serves as the official information hub for PDF HUB, ScrollCount, and QR HUB.</p>
-        </article>
-        <article id="support" class="info-card">
-          <div class="info-icon" aria-hidden="true">↗</div>
-          <h3>Contact &amp; support</h3>
-          <p>For questions, feedback, or support requests, contact the developer through the GitHub repository.</p>
-          <p><a href="https://github.com/krishna492007/krishna492007.github.io/issues" target="_blank" rel="noopener noreferrer">Open the support page on GitHub ↗</a></p>
-        </article>
+    </section>
+
+    <!-- Developer Compliance & Support -->
+    <section id="compliance" class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Verification &amp; Support</p>
+        <h2 class="section-title">Official Developer Information</h2>
+        <p class="section-subtitle">Official details for Google Play Store compliance, ad inventory verification, and direct user support.</p>
+      </div>
+
+      <div class="compliance-grid">
+        <div class="compliance-card">
+          <div class="compliance-header">
+            <div class="compliance-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h3>AdMob &amp; Store Verification</h3>
+              <p style="margin: 0; font-size: 0.8rem; color: #10b981; font-weight: 700;">VERIFIED ACTIVE</p>
+            </div>
+          </div>
+          <p>
+            This domain is the authorized official developer website for Krishna Tech Hub's Google Play Console profile and hosts verified <code>app-ads.txt</code> inventory records.
+          </p>
+          <div>
+            <a href="app-ads.txt" target="_blank" class="code-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span>View app-ads.txt Specification ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="compliance-card" id="support">
+          <div class="compliance-header">
+            <div class="compliance-icon" aria-hidden="true" style="color: #60a5fa; background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.25);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h3>Contact &amp; Support</h3>
+              <p style="margin: 0; font-size: 0.8rem; color: #94a3b8; font-weight: 600;">Direct Developer Inquiries</p>
+            </div>
+          </div>
+          <p>
+            Have feedback, feature suggestions, or need assistance with any of our apps? Reach out directly via email or report an issue on GitHub.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a href="mailto:krishnatechhub@gmail.com" class="code-badge" style="color: #e2e8f0; width: fit-content;">
+              <span>✉</span>
+              <strong>krishnatechhub@gmail.com</strong>
+            </a>
+            <a href="https://github.com/krishna492007/krishna492007.github.io/issues" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; color: var(--accent-blue); font-weight: 600;">
+              Submit an issue on GitHub Repository ↗
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap footer-row">
-      <div><div class="footer-brand">Krishna Apps</div><div class="footer-copy">© <span id="year">2026</span> Krishna. All rights reserved.</div></div>
-      <nav class="footer-links" aria-label="Legal pages">
-        <a href="pdf-hub-privacy-policy.html">PDF HUB Privacy</a>
-        <a href="scrollcount-privacy-policy.html">ScrollCount Privacy</a>
-        <a href="qr-hub-privacy-policy.html">QR HUB Privacy</a>
-        <a href="qr-hub-terms.html">Terms of Use</a>
-      </nav>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="brand">
+            <div class="brand-icon" aria-hidden="true">K</div>
+            <div class="brand-meta">
+              <span class="brand-title">Krishna Tech Hub</span>
+              <span class="brand-subtitle">Official Developer Hub</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Independent mobile software developer building fast, private, and offline-first tools for Android.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h5>Applications</h5>
+            <ul class="footer-links-list">
+              <li><a href="#pdf-hub">PDF Hub</a></li>
+              <li><a href="#qr-hub">QR Hub</a></li>
+              <li><a href="#scrollcount">ScrollCount</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Privacy Policies</h5>
+            <ul class="footer-links-list">
+              <li><a href="pdf-hub-privacy-policy.html">PDF Hub Privacy</a></li>
+              <li><a href="qr-hub-privacy-policy.html">QR Hub Privacy</a></li>
+              <li><a href="scrollcount-privacy-policy.html">ScrollCount Privacy</a></li>
+              <li><a href="qr-hub-terms.html">QR Hub Terms of Use</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Legal &amp; Compliance</h5>
+            <ul class="footer-links-list">
+              <li><a href="app-ads.txt" target="_blank">app-ads.txt</a></li>
+              <li><a href="#standards">Our Standards</a></li>
+              <li><a href="mailto:krishnatechhub@gmail.com">Support Inquiries</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span id="current-year">2026</span> Krishna Tech Hub. All rights reserved.
+        </div>
+        <div>
+          Hosted on GitHub Pages • Optimized for Google Play Developer Standards
+        </div>
+      </div>
     </div>
   </footer>
+
+  <script>
+    // Set dynamic current year in footer
+    const yearElem = document.getElementById('current-year');
+    if (yearElem) {
+      yearElem.textContent = new Date().getFullYear();
+    }
+  </script>
 </body>
 </html>
