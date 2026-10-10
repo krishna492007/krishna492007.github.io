@@ -9,7 +9,13 @@
   <meta property="og:description" content="Official home of PDF Hub, QR Hub, and ScrollCount. 100% private, offline-first Android utilities designed for everyday productivity.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://krishna492007.github.io/">
+  <meta property="og:image" content="https://krishna492007.github.io/assets/images/dev_web/krishna-tech-hub-neon-logo.png">
   <title>Krishna Tech Hub — Official Developer Website</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dev_web/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="assets/images/dev_web/header-k-icon.png">
 
   <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -130,18 +136,23 @@
     }
 
     .brand-icon {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: var(--radius-md);
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
-      font-weight: 800;
-      font-size: 1.1rem;
+      overflow: hidden;
       box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      flex-shrink: 0;
+      background: transparent;
+    }
+
+    .brand-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .brand-meta {
@@ -909,7 +920,9 @@
   <header class="header">
     <div class="container nav-container">
       <a href="#top" class="brand" aria-label="Krishna Tech Hub Homepage">
-        <div class="brand-icon" aria-hidden="true">K</div>
+        <div class="brand-icon" aria-hidden="true">
+          <img src="assets/images/dev_web/header-k-icon.png" alt="Krishna Tech Hub">
+        </div>
         <div class="brand-meta">
           <span class="brand-title">Krishna Tech Hub</span>
           <span class="brand-subtitle">Official Developer Hub</span>
@@ -1255,8 +1268,8 @@
       <div class="compliance-grid">
         <div class="compliance-card">
           <div class="compliance-header">
-            <div class="compliance-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div style="width: 52px; height: 52px; border-radius: 50%; overflow: hidden; flex-shrink: 0; box-shadow: 0 0 18px rgba(6, 182, 212, 0.45); border: 2px solid rgba(6, 182, 212, 0.45);">
+              <img src="assets/images/dev_web/krishna-tech-hub-neon-logo.png" alt="Krishna Tech Hub Emblem" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
             <div>
               <h3>AdMob &amp; Store Verification</h3>
@@ -1307,7 +1320,9 @@
       <div class="footer-top">
         <div class="footer-brand-col">
           <div class="brand">
-            <div class="brand-icon" aria-hidden="true">K</div>
+            <div class="brand-icon" aria-hidden="true">
+              <img src="assets/images/dev_web/header-k-icon.png" alt="Krishna Tech Hub">
+            </div>
             <div class="brand-meta">
               <span class="brand-title">Krishna Tech Hub</span>
               <span class="brand-subtitle">Official Developer Hub</span>
