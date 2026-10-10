@@ -30,6 +30,10 @@ Official GitHub Pages developer portal (`https://krishna-techhub.github.io`) sho
 
 ## Deployment & Git Workflow
 - Hosted via GitHub Pages from repository `krishna-techhub/krishna-techhub.github.io` on branch `main`.
+- **Local Testing:** Test by opening `index.html` directly in any browser or running `python -m http.server 8000`.
+- **Gotchas & CDN Cache:**
+  - The `.nojekyll` file at root prevents Jekyll from skipping directories starting with `_` or dotfiles.
+  - GitHub Pages CDN cache updates within ~60–90 seconds after `git push origin main`.
 - Deploy commands:
   ```bash
   git add .
