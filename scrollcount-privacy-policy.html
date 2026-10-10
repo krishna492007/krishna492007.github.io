@@ -1,343 +1,1860 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScrollCount: Reels &amp; Shorts - Privacy Policy</title>
-    <meta name="description" content="Official website and privacy policy for ScrollCount: Reels & Shorts Android Application by Krishna Tech Hub.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #0A0A0D;
-            --surface: #14141B;
-            --surface-elevated: #1D1E27;
-            --accent-primary: #6366F1;
-            --accent-soft: #818CF8;
-            --accent-dim: rgba(99, 102, 241, 0.15);
-            --accent-border: rgba(99, 102, 241, 0.3);
-            --text-primary: #F1EFEA;
-            --text-secondary: #94949E;
-            --text-muted: #5C5D66;
-            --border: rgba(255, 255, 255, 0.08);
-            --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07090e">
+  <title>Privacy Policy — ScrollCount : Reels & Shorts Tracker | Krishna Tech Hub</title>
+  <meta name="description" content="Official Privacy Policy and Data Safety disclosures for ScrollCount : Reels & Shorts Tracker (com.techhub.scrollcount) by Krishna Tech Hub. 100% offline with zero internet permission.">
+  <meta name="robots" content="index, follow">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="ScrollCount Privacy Policy — Krishna Tech Hub">
+  <meta property="og:description" content="Official Privacy Policy for ScrollCount (com.techhub.scrollcount). 100% offline digital wellbeing tracker with zero internet permission and zero data collection.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://krishna-techhub.github.io/scrollcount-privacy-policy.html">
+  <meta property="og:image" content="https://krishna-techhub.github.io/assets/brand/krishna-tech-hub-neon-logo.png">
 
-        body {
-            background-color: var(--bg);
-            color: var(--text-primary);
-            font-family: var(--font-family);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+  <!-- Favicons for ScrollCount -->
+  <link rel="icon" type="image/x-icon" href="assets/apps/scrollcount/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/apps/scrollcount/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/apps/scrollcount/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/apps/scrollcount/favicons/apple-touch-icon.png">
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 24px;
-        }
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        header {
-            text-align: center;
-            padding: 40px 0 30px;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 40px;
-        }
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --bg-surface: #0e121b;
+      --bg-card: rgba(18, 20, 36, 0.75);
+      --bg-card-hover: rgba(24, 28, 48, 0.88);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-highlight: rgba(255, 255, 255, 0.16);
 
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--accent-dim);
-            border: 1px solid var(--accent-border);
-            color: var(--accent-soft);
-            padding: 6px 16px;
-            border-radius: 999px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            letter-spacing: 0.5px;
-        }
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
 
-        h1 {
-            font-size: 38px;
-            font-weight: 800;
-            color: var(--text-primary);
-            margin-bottom: 12px;
-            background: linear-gradient(135deg, #FFFFFF 0%, #818CF8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+      --accent-purple: #8b5cf6;
+      --accent-purple-light: #a78bfa;
+      --accent-purple-glow: rgba(139, 92, 246, 0.32);
+      --accent-indigo: #6366f1;
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
 
-        .tagline {
-            font-size: 17px;
-            color: var(--text-secondary);
-            max-width: 650px;
-            margin: 0 auto 24px;
-        }
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
 
-        .cta-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #6366F1 0%, #818CF8 100%);
-            color: #FFFFFF;
-            padding: 14px 28px;
-            border-radius: 14px;
-            font-weight: 700;
-            font-size: 15px;
-            text-decoration: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.25);
-        }
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
 
-        .cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(99, 102, 241, 0.4);
-        }
+      --blur-glass: blur(16px);
+      --shadow-card: 0 16px 40px -12px rgba(0, 0, 0, 0.65);
+    }
 
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 32px;
-            margin-bottom: 24px;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+    }
 
-        .card-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
-            background: var(--accent-dim);
-            border: 1px solid var(--accent-border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-soft);
-            font-size: 18px;
-        }
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.65;
+      overflow-x: hidden;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      background-image:
+        radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 90% 25%, rgba(99, 102, 241, 0.09) 0%, transparent 40%),
+        radial-gradient(circle at 10% 65%, rgba(6, 182, 212, 0.05) 0%, transparent 45%);
+    }
 
-        h2 {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
+    /* Ambient background grid */
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      background-size: 40px 40px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      pointer-events: none;
+      z-index: 0;
+    }
 
-        h3 {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--accent-soft);
-            margin: 20px 0 8px;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        p {
-            color: var(--text-secondary);
-            font-size: 15px;
-            margin-bottom: 14px;
-        }
+    .container {
+      width: min(1200px, calc(100% - 48px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
 
-        ul {
-            list-style: none;
-            padding-left: 0;
-            margin-bottom: 16px;
-        }
+    /* Header & Navigation */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: var(--blur-glass);
+      -webkit-backdrop-filter: var(--blur-glass);
+      background: rgba(7, 9, 14, 0.82);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: all 0.25s ease;
+    }
 
-        li {
-            color: var(--text-secondary);
-            font-size: 14.5px;
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 24px;
-        }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
 
-        li::before {
-            content: "\2713";
-            position: absolute;
-            left: 0;
-            color: var(--accent-soft);
-            font-weight: bold;
-        }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
 
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 16px;
-        }
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
+      flex-shrink: 0;
+      background: transparent;
+    }
 
-        .feature-box {
-            background: var(--surface-elevated);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 18px;
-        }
+    .brand-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-        .feature-box h4 {
-            color: var(--text-primary);
-            font-size: 15px;
-            margin-bottom: 6px;
-        }
+    .brand-meta {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
 
-        .feature-box p {
-            font-size: 13.5px;
-            margin-bottom: 0;
-        }
+    .brand-title {
+      color: var(--text-main);
+      font-weight: 800;
+    }
 
-        .highlight-box {
-            background: rgba(99, 102, 241, 0.08);
-            border: 1px solid var(--accent-border);
-            border-radius: 12px;
-            padding: 16px;
-            margin: 16px 0;
-        }
+    .brand-subtitle {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
 
-        .highlight-box p {
-            color: var(--text-primary);
-            font-size: 14px;
-            margin: 0;
-        }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 40px 0 20px;
-            border-top: 1px solid var(--border);
-            color: var(--text-muted);
-            font-size: 13.5px;
-        }
+    .nav-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+    }
 
-        footer a {
-            color: var(--accent-soft);
-            text-decoration: none;
-        }
+    .nav-back-link:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+    }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.08));
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      color: #ddd6fe;
+      transition: all 0.2s ease;
+    }
 
-        @media (max-width: 640px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-            h1 {
-                font-size: 28px;
-            }
-            .card {
-                padding: 22px;
-            }
-        }
-    </style>
+    .nav-cta:hover {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(139, 92, 246, 0.15));
+      border-color: rgba(139, 92, 246, 0.6);
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 18px rgba(139, 92, 246, 0.3);
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb-nav {
+      padding: 24px 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.84rem;
+      color: var(--text-dim);
+    }
+
+    .breadcrumb-nav a {
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .breadcrumb-nav a:hover {
+      color: var(--text-main);
+    }
+
+    .breadcrumb-sep {
+      color: var(--border-highlight);
+    }
+
+    .breadcrumb-current {
+      color: var(--accent-purple-light);
+      font-weight: 600;
+    }
+
+    /* Policy Hero Header */
+    .policy-hero {
+      padding: 20px 0 40px;
+    }
+
+    .policy-header-card {
+      background: linear-gradient(135deg, rgba(22, 18, 34, 0.88) 0%, rgba(14, 18, 27, 0.92) 100%);
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      backdrop-filter: var(--blur-glass);
+      box-shadow: var(--shadow-card), 0 0 40px -15px rgba(139, 92, 246, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .policy-header-card::after {
+      content: "";
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .policy-header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .policy-header-main {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .app-avatar-box {
+      width: 92px;
+      height: 92px;
+      border-radius: 22px;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 25px rgba(139, 92, 246, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: #000;
+      position: relative;
+    }
+
+    .app-avatar-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .policy-title-group h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .policy-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .meta-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+
+    .badge-mono {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      background: rgba(0, 0, 0, 0.45);
+      color: #94a3b8;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .badge-purple {
+      background: rgba(139, 92, 246, 0.16);
+      color: #ddd6fe;
+      border: 1px solid rgba(139, 92, 246, 0.35);
+    }
+
+    .badge-green {
+      background: rgba(16, 185, 129, 0.14);
+      color: #6ee7b7;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-gold {
+      background: rgba(245, 158, 11, 0.14);
+      color: #fde68a;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .policy-header-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-end;
+    }
+
+    .btn-play-store {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #f8fafc;
+      color: #07090e;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-play-store:hover {
+      background: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-play-store svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .last-updated-text {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+    }
+
+    /* Core Trust Guarantee Box */
+    .trust-banner {
+      margin-top: 28px;
+      background: rgba(11, 15, 24, 0.65);
+      border: 1px solid rgba(139, 92, 246, 0.25);
+      border-radius: var(--radius-lg);
+      padding: 24px 28px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .trust-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(139, 92, 246, 0.14);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: var(--accent-purple-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .trust-item h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .trust-item p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Layout: 2 Columns (Sticky TOC + Main Legal Content) */
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 40px;
+      margin-bottom: 80px;
+      align-items: start;
+    }
+
+    /* Sticky Sidebar Navigation */
+    .policy-sidebar {
+      position: sticky;
+      top: 96px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      backdrop-filter: var(--blur-glass);
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+
+    .sidebar-heading {
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .toc-item a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: all 0.2s ease;
+      line-height: 1.4;
+      border-left: 2px solid transparent;
+    }
+
+    .toc-item a:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+      border-left-color: var(--accent-purple);
+      padding-left: 14px;
+    }
+
+    .toc-item.active a {
+      color: var(--text-main);
+      background: rgba(139, 92, 246, 0.15);
+      border-left-color: var(--accent-purple);
+      font-weight: 700;
+    }
+
+    .sidebar-widget {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .sidebar-app-box {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sidebar-app-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .sidebar-app-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sidebar-app-info h5 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .sidebar-app-info p {
+      font-size: 0.76rem;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+    }
+
+    /* Main Policy Content Articles */
+    .policy-content {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .policy-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      backdrop-filter: var(--blur-glass);
+      transition: border-color 0.2s ease;
+      scroll-margin-top: 100px;
+    }
+
+    .policy-section:hover {
+      border-color: rgba(255, 255, 255, 0.14);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(139, 92, 246, 0.16);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      color: var(--accent-purple-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .section-header h2 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+    }
+
+    .policy-section h3 {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin: 22px 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .policy-section p {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .policy-section strong {
+      color: #f8fafc;
+      font-weight: 700;
+    }
+
+    /* Highlight Callout Box */
+    .callout-box {
+      background: rgba(18, 16, 32, 0.85);
+      border-left: 4px solid var(--accent-purple);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 18px 22px;
+      margin: 20px 0;
+      border-top: 1px solid var(--border-subtle);
+      border-right: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .callout-box.green {
+      border-left-color: var(--accent-emerald);
+      background: rgba(10, 24, 20, 0.65);
+    }
+
+    .callout-box.gold {
+      border-left-color: #f59e0b;
+      background: rgba(28, 22, 12, 0.65);
+    }
+
+    .callout-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .callout-box p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+      color: var(--text-muted);
+    }
+
+    /* Custom Checklists and Bullet Cards */
+    .checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+    }
+
+    .checklist-icon {
+      color: var(--accent-purple-light);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .checklist-text {
+      font-size: 0.92rem;
+      color: #cbd5e1;
+      line-height: 1.55;
+    }
+
+    .checklist-text strong {
+      color: #f1f5f9;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* Permissions Grid */
+    .permission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .permission-card {
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .permission-card:hover {
+      border-color: rgba(139, 92, 246, 0.4);
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .permission-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: rgba(139, 92, 246, 0.15);
+      color: #ddd6fe;
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      margin-bottom: 10px;
+    }
+
+    .permission-tag.denied {
+      background: rgba(239, 68, 68, 0.15);
+      color: #fca5a5;
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+
+    .permission-card h4 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .permission-card p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    /* Data Safety Table */
+    .table-responsive {
+      overflow-x: auto;
+      margin: 20px 0;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+
+    .compliance-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    .compliance-table th {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 14px 18px;
+      color: var(--text-main);
+      font-weight: 700;
+      border-bottom: 1px solid var(--border-subtle);
+      white-space: nowrap;
+    }
+
+    .compliance-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-subtle);
+      color: #cbd5e1;
+    }
+
+    .compliance-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .compliance-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .status-zero {
+      background: rgba(16, 185, 129, 0.15);
+      color: #6ee7b7;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    /* Contact Card */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(26, 20, 38, 0.8), rgba(12, 16, 26, 0.9));
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 16px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: var(--accent-purple-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .contact-details h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-dim);
+      margin-bottom: 4px;
+    }
+
+    .contact-details a, .contact-details span {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .contact-details a:hover {
+      color: var(--accent-purple-light);
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border-subtle);
+      background: rgba(5, 7, 11, 0.95);
+      padding: 60px 0 40px;
+      font-size: 0.88rem;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand-col {
+      max-width: 380px;
+    }
+
+    .footer-desc {
+      color: var(--text-dim);
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+
+    .footer-links-group {
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .footer-col h5 {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-main);
+      margin-bottom: 14px;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-link-item a {
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .footer-link-item a:hover {
+      color: var(--text-main);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: var(--text-dim);
+      font-size: 0.82rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 960px) {
+      .policy-layout {
+        grid-template-columns: 1fr;
+      }
+      .policy-sidebar {
+        display: none;
+      }
+      .policy-header-card {
+        padding: 28px;
+      }
+      .policy-header-cta {
+        align-items: flex-start;
+        width: 100%;
+      }
+      .policy-section {
+        padding: 26px;
+      }
+      .policy-title-group h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-container {
+        height: 64px;
+      }
+      .brand-subtitle {
+        display: none;
+      }
+      .policy-header-main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .app-avatar-box {
+        width: 72px;
+        height: 72px;
+        border-radius: 18px;
+      }
+      .trust-banner {
+        grid-template-columns: 1fr;
+        padding: 18px;
+      }
+      .contact-card {
+        grid-template-columns: 1fr;
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: calc(100% - 24px);
+      }
+      .policy-header-card {
+        padding: 20px 16px;
+      }
+      .policy-section {
+        padding: 20px 16px;
+      }
+      .policy-title-group h1 {
+        font-size: 1.45rem;
+      }
+      .policy-subtitle {
+        font-size: 0.92rem;
+      }
+      .nav-actions {
+        gap: 8px;
+      }
+      .nav-back-link {
+        padding: 6px 10px;
+        font-size: 0.78rem;
+      }
+      .nav-cta {
+        padding: 6px 10px;
+        font-size: 0.78rem;
+      }
+      .footer-links-group {
+        flex-direction: column;
+        gap: 24px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
+
+    /* Logo Lightbox Modal */
+    .logo-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 6, 10, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+    }
+
+    .logo-modal-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .logo-modal-card {
+      background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(10, 15, 25, 0.98) 100%);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      border-radius: 24px;
+      padding: 38px 32px 32px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 50px -10px rgba(139, 92, 246, 0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transform: scale(0.92);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .logo-modal-backdrop.active .logo-modal-card {
+      transform: scale(1);
+    }
+
+    .logo-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .logo-modal-close:hover {
+      background: rgba(239, 68, 68, 0.2);
+      border-color: rgba(239, 68, 68, 0.4);
+      color: #ffffff;
+      transform: rotate(90deg);
+    }
+
+    .logo-modal-image-wrap {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 22px;
+      box-shadow: 0 0 35px rgba(139, 92, 246, 0.5), inset 0 0 20px rgba(139, 92, 246, 0.3);
+      border: 3px solid rgba(139, 92, 246, 0.6);
+      background: #000000;
+      position: relative;
+    }
+
+    .logo-modal-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .logo-modal-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-modal-subtitle {
+      font-size: 0.85rem;
+      color: #a78bfa;
+      font-weight: 600;
+      margin-bottom: 24px;
+      letter-spacing: 0.04em;
+    }
+
+    .logo-modal-actions {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .logo-modal-btn {
+      flex: 1 1 180px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .logo-modal-btn-primary {
+      background: linear-gradient(135deg, #7c3aed, #4f46e5);
+      color: #ffffff;
+      border: 1px solid rgba(167, 139, 250, 0.5);
+      box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35);
+    }
+
+    .logo-modal-btn-primary:hover {
+      box-shadow: 0 6px 22px rgba(124, 58, 237, 0.55);
+      transform: translateY(-2px);
+      color: #ffffff;
+    }
+
+    .logo-modal-btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .logo-modal-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .brand-icon.logo-trigger {
+      cursor: pointer;
+    }
+
+    .brand-icon.logo-trigger:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 24px rgba(139, 92, 246, 0.65);
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <div class="badge">&#x2728; Verified Android Application</div>
-            <h1>ScrollCount - Reels &amp; Shorts</h1>
-            <p class="tagline">Accurate, mindful screen-time tracking for Instagram Reels and YouTube Shorts. 100% offline, private, and zero data collection.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.techhub.scrollcount" class="cta-btn" target="_blank" rel="noopener">
-                <span>View on Google Play</span> &rarr;
-            </a>
-        </header>
+  <div class="bg-grid"></div>
 
-        <!-- PRIVACY POLICY SECTION -->
-        <section id="privacy" class="card">
-            <div class="card-header">
-                <div class="card-icon">&#x1F6E1;&#xFE0F;</div>
-                <h2>Official Privacy Policy</h2>
-            </div>
-            <p><strong>Effective Date: October 1, 2026</strong></p>
-            <p>At <strong>ScrollCount - Reels &amp; Shorts</strong> (Application ID: <code>com.techhub.scrollcount</code>, developed by <em>Krishna Tech Hub</em>), your privacy is our core principle. ScrollCount is engineered as a 100% offline-first application designed to help users understand their short-form video consumption habits without compromising personal data.</p>
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="brand">
+        <a href="assets/brand/krishna-tech-hub-neon-logo.png" target="_blank" class="brand-icon logo-trigger" aria-label="Open Krishna Tech Hub Official Logo" title="Click to view Krishna Tech Hub Official Logo">
+          <img src="assets/brand/header-k-icon.png" alt="Krishna Tech Hub">
+        </a>
+        <a href="index.html" class="brand-meta" aria-label="Krishna Tech Hub Homepage">
+          <span class="brand-title">Krishna Tech Hub</span>
+          <span class="brand-subtitle">Official Developer Hub</span>
+        </a>
+      </div>
 
-            <div class="highlight-box">
-                <p><strong>&#x1F512; Absolute Privacy Guarantee:</strong> ScrollCount does not request the <code>android.permission.INTERNET</code> permission. The app has zero network connectivity and cannot transmit data outside your physical device under any circumstance.</p>
-            </div>
-
-            <h3>1. Prominent Disclosure: Android AccessibilityService Usage</h3>
-            <p>ScrollCount requires the Android <strong>AccessibilityService API</strong> (<code>android.permission.BIND_ACCESSIBILITY_SERVICE</code>) exclusively for its core functionality: detecting when Instagram Reels or YouTube Shorts are actively playing on your screen to track screen time accurately.</p>
-            <ul>
-                <li><strong>Purpose of Use:</strong> The service inspects window state changes and UI node hierarchies solely to identify short-video player containers (e.g., Instagram Reels container or YouTube Shorts player) and measure viewing duration.</li>
-                <li><strong>Strict Privacy Boundary:</strong> The Accessibility Service <strong>NEVER</strong> reads, accesses, logs, or monitors personal messages, chats, usernames, passwords, payment details, keystrokes, personal media, or search history.</li>
-                <li><strong>No Background Audio or Video Capture:</strong> The service does not record audio, video, or screen pixels.</li>
-                <li><strong>User Control:</strong> You can enable or disable this Accessibility Service at any time via your device's Android Settings &gt; Accessibility.</li>
-            </ul>
-
-            <h3>2. Zero Data Collection &amp; Zero Transmission</h3>
-            <p>ScrollCount does not collect, harvest, sell, or share any personal information, location data, device identifiers, or usage logs. All aggregated statistics (daily scroll count, qualified view time) are stored strictly inside your device's encrypted private application storage.</p>
-
-            <h3>3. No Third-Party SDKs or Advertising</h3>
-            <p>ScrollCount is completely free from third-party tracking, analytics, and advertising libraries. There is no Firebase, Google Analytics, Facebook SDK, Crashlytics, or AdMob integrated into the app. The codebase is fully self-contained.</p>
-
-            <h3>4. Permissions Requested</h3>
-            <ul>
-                <li><strong>POST_NOTIFICATIONS (Android 13+):</strong> Used solely to display optional usage limit alerts and daily habit summaries directly on your device.</li>
-                <li><strong>BIND_ACCESSIBILITY_SERVICE:</strong> Used exclusively to detect active Reels/Shorts viewing sessions as described above.</li>
-                <li><strong>INTERNET:</strong> <em>NOT REQUESTED</em>. The app contains no networking capabilities.</li>
-            </ul>
-
-            <h3>5. Data Retention and Deletion</h3>
-            <p>Because all usage data is stored purely on your local device, uninstalling the application or clearing the app data via Android Settings permanently and immediately erases all stored records.</p>
-
-            <h3>6. Children's Privacy</h3>
-            <p>ScrollCount does not collect data from any user, including children under the age of 13. The app is safe for all audiences.</p>
-
-            <h3>7. Changes to This Privacy Policy</h3>
-            <p>We may update our Privacy Policy from time to time. Any revisions will be published immediately at this public URL with an updated effective date.</p>
-
-            <h3>8. Contact Us</h3>
-            <p>If you have any questions or suggestions regarding our Privacy Policy or the application, please contact us at:</p>
-            <p>&#x1F4E7; <strong>Email:</strong> <a href="mailto:krishnatechhub@gmail.com" style="color: var(--accent-soft);">krishnatechhub@gmail.com</a><br>
-            &#x1F3E2; <strong>Developer:</strong> Krishna Tech Hub<br>
-            &#x1F4CD; <strong>Application ID:</strong> <code>com.techhub.scrollcount</code></p>
-        </section>
-
-        <!-- FEATURES -->
-        <section class="card">
-            <div class="card-header">
-                <div class="card-icon">&#x26A1;</div>
-                <h2>Key App Features</h2>
-            </div>
-            <div class="grid-2">
-                <div class="feature-box">
-                    <h4>&#x1F4CA; Accurate Usage Tracking</h4>
-                    <p>Real-time detection for Instagram Reels and YouTube Shorts with millisecond accuracy.</p>
-                </div>
-                <div class="feature-box">
-                    <h4>&#x23F3; Smart 3s+ Qualification</h4>
-                    <p>Filters rapid swipes so only videos you actually watched are counted towards your screen time.</p>
-                </div>
-                <div class="feature-box">
-                    <h4>&#x1F501; Duplicate Protection</h4>
-                    <p>Re-watching the same video is recognized and not double counted.</p>
-                </div>
-                <div class="feature-box">
-                    <h4>&#x1F512; 100% Offline &amp; Private</h4>
-                    <p>Zero internet permissions. Your data never leaves your physical phone.</p>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 ScrollCount by Krishna Tech Hub. All rights reserved.</p>
-            <p style="margin-top: 6px;">
-                <a href="#privacy">Privacy Policy</a> &bull; 
-                <a href="https://play.google.com/store/apps/details?id=com.techhub.scrollcount" target="_blank" rel="noopener">Google Play</a>
-            </p>
-        </footer>
+      <div class="nav-actions">
+        <a href="index.html" class="nav-back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>All Apps</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.techhub.scrollcount" target="_blank" rel="noopener noreferrer" class="nav-cta">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.442 1.442 0 0 1-.22-.767V2.581c0-.285.078-.553.219-.767zm11.235 11.236l2.164-2.164-9.352-5.402 7.188 7.566zm2.84-2.84c.484.28.803.793.803 1.39 0 .598-.319 1.11-.803 1.39l-1.614.932-2.316-2.322 2.316-2.322 1.614.932zm-2.84 2.84l-7.188 7.566 9.352-5.402-2.164-2.164z"/></svg>
+          <span>Google Play</span>
+        </a>
+      </div>
     </div>
+  </header>
+
+  <!-- Main Body Container -->
+  <main class="container">
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="index.html#apps">Apps</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">ScrollCount Privacy Policy</span>
+    </nav>
+
+    <!-- Policy Hero Section -->
+    <section class="policy-hero">
+      <div class="policy-header-card">
+        <div class="policy-header-content">
+          <div class="policy-header-main">
+            <div class="app-avatar-box">
+              <img src="assets/apps/scrollcount/icon.png" alt="ScrollCount App Icon">
+            </div>
+            <div class="policy-title-group">
+              <h1>
+                <span>ScrollCount : Reels & Shorts Tracker</span>
+              </h1>
+              <p class="policy-subtitle">Official Privacy Policy &amp; Prominent AccessibilityService Disclosures</p>
+              <div class="meta-badges-row">
+                <span class="badge-pill badge-mono">Package: com.techhub.scrollcount</span>
+                <span class="badge-pill badge-purple">Zero Internet Permission</span>
+                <span class="badge-pill badge-green">100% Offline Wellbeing</span>
+                <span class="badge-pill badge-gold">Google Play Compliant</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="policy-header-cta">
+            <a href="https://play.google.com/store/apps/details?id=com.techhub.scrollcount" target="_blank" rel="noopener noreferrer" class="btn-play-store">
+              <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.442 1.442 0 0 1-.22-.767V2.581c0-.285.078-.553.219-.767zm11.235 11.236l2.164-2.164-9.352-5.402 7.188 7.566zm2.84-2.84c.484.28.803.793.803 1.39 0 .598-.319 1.11-.803 1.39l-1.614.932-2.316-2.322 2.316-2.322 1.614.932zm-2.84 2.84l-7.188 7.566 9.352-5.402-2.164-2.164z"/></svg>
+              <span>Download on Google Play</span>
+            </a>
+            <span class="last-updated-text">Effective &amp; Revised: October 2026</span>
+          </div>
+        </div>
+
+        <!-- Trust Highlights Banner -->
+        <div class="trust-banner">
+          <div class="trust-item">
+            <div class="trust-icon">🚫</div>
+            <div>
+              <h4>Zero Internet Permission Declared</h4>
+              <p><code>android.permission.INTERNET</code> is not requested. The app physically cannot send data over any network socket.</p>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon">🛡️</div>
+            <div>
+              <h4>Strict Accessibility Boundary</h4>
+              <p>AccessibilityService API identifies video player bounds only. Never reads chats, keystrokes, passwords, or feeds.</p>
+            </div>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-icon">📊</div>
+            <div>
+              <h4>100% Local Encrypted Stats</h4>
+              <p>Daily scroll totals and screen time are stored solely in sandboxed on-device SQLite storage.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two-Column Policy Layout -->
+    <div class="policy-layout">
+
+      <!-- Sticky Table of Contents Sidebar -->
+      <aside class="policy-sidebar" aria-label="Table of Contents">
+        <div class="sidebar-heading">
+          <span>Table of Contents</span>
+          <span>10 Sections</span>
+        </div>
+        <ul class="toc-list" id="toc-list">
+          <li class="toc-item"><a href="#intro">1. Commitment &amp; Mission</a></li>
+          <li class="toc-item"><a href="#accessibility-disclosure">2. AccessibilityService API</a></li>
+          <li class="toc-item"><a href="#zero-internet">3. Zero Internet Permission</a></li>
+          <li class="toc-item"><a href="#data-collection">4. Zero Data Collection</a></li>
+          <li class="toc-item"><a href="#permissions">5. Android Permissions</a></li>
+          <li class="toc-item"><a href="#local-storage">6. Local Storage &amp; Deletion</a></li>
+          <li class="toc-item"><a href="#no-trackers">7. Zero SDKs &amp; No Ads</a></li>
+          <li class="toc-item"><a href="#children">8. Children's Privacy (COPPA)</a></li>
+          <li class="toc-item"><a href="#user-rights">9. Global Privacy Rights</a></li>
+          <li class="toc-item"><a href="#contact">10. Contact &amp; Support</a></li>
+        </ul>
+
+        <div class="sidebar-widget">
+          <div class="sidebar-heading">
+            <span>Verified App Spec</span>
+          </div>
+          <div class="sidebar-app-box">
+            <div class="sidebar-app-icon">
+              <img src="assets/apps/scrollcount/icon.png" alt="ScrollCount Icon">
+            </div>
+            <div class="sidebar-app-info">
+              <h5>ScrollCount Tracker</h5>
+              <p>ID: com.techhub.scrollcount</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Policy Content Area -->
+      <article class="policy-content">
+
+        <!-- 1. Introduction & Overview -->
+        <section id="intro" class="policy-section">
+          <div class="section-header">
+            <div class="section-number">01</div>
+            <h2>Commitment &amp; Application Scope</h2>
+          </div>
+          <p>
+            Welcome to the official Privacy Policy for <strong>ScrollCount : Reels &amp; Shorts Tracker</strong> (Application ID: <code>com.techhub.scrollcount</code>), engineered and published by <strong>Krishna Tech Hub</strong>.
+          </p>
+          <p>
+            ScrollCount is an offline-first digital wellbeing utility created to help conscious smartphone users understand, measure, and curb doom-scrolling habits across short-video platforms (Instagram Reels and YouTube Shorts). We believe your digital wellness data is strictly personal. Our core architecture guarantees that your screen time numbers belong exclusively to you.
+          </p>
+
+          <div class="callout-box green">
+            <div class="callout-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Our Foundational Guarantee</span>
+            </div>
+            <p>
+              ScrollCount operates without central user databases, without cloud synchronization, and without tracking SDKs. Everything is calculated, rendered, and maintained directly on your phone's processor.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. Prominent Disclosure: AccessibilityService API -->
+        <section id="accessibility-disclosure" class="policy-section">
+          <div class="section-header">
+            <div class="section-number">02</div>
+            <h2>Prominent Disclosure: Android AccessibilityService Usage</h2>
+          </div>
+          <p>
+            In accordance with <strong>Google Play Developer Policy regarding Accessibility APIs</strong>, we provide this comprehensive, upfront disclosure explaining our exact use of <code>android.permission.BIND_ACCESSIBILITY_SERVICE</code>:
+          </p>
+
+          <div class="callout-box gold">
+            <div class="callout-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span>Why ScrollCount Requires AccessibilityService</span>
+            </div>
+            <p>
+              ScrollCount uses the Android AccessibilityService API <strong>solely to detect when Instagram Reels or YouTube Shorts player viewports are actively visible and playing on your screen</strong>. This is the only technical mechanism Android provides to accurately calculate short-form video consumption without rooting your phone.
+            </p>
+          </div>
+
+          <h3>Technical Functionality &amp; Operation</h3>
+          <ul class="checklist">
+            <li class="checklist-item">
+              <span class="checklist-icon">✔</span>
+              <div class="checklist-text">
+                <strong>Targeted UI Node Inspection:</strong>
+                The service listens for window state changes strictly to recognize the UI layout containers of Instagram Reels and YouTube Shorts.
+              </div>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon">✔</span>
+              <div class="checklist-text">
+                <strong>Smart 3s+ Qualification Algorithm:</strong>
+                Rapid accidental swipes (under 3 seconds) are filtered out so that only videos you actually pause and watch are counted toward your daily scroll quota.
+              </div>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon">✔</span>
+              <div class="checklist-text">
+                <strong>Duplicate Protection:</strong>
+                Re-watching a looping video is recognized so that repeat views of the same clip are not falsely double-counted.
+              </div>
+            </li>
+          </ul>
+
+          <h3>Strict Privacy Boundaries — What We NEVER Access</h3>
+          <p>
+            To ensure complete trust and security, the Accessibility Service operates with strict programmatic limitations:
+          </p>
+          <ul class="checklist">
+            <li class="checklist-item">
+              <span class="checklist-icon">🚫</span>
+              <div class="checklist-text">
+                <strong>NO Chat or Message Monitoring:</strong>
+                The service never reads, accesses, logs, or stores direct messages (DMs), chats, comments, or personal conversations.
+              </div>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon">🚫</span>
+              <div class="checklist-text">
+                <strong>NO Keystrokes or Password Logging:</strong>
+                The service never monitors text input fields, passwords, PINs, search queries, or banking details.
+              </div>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon">🚫</span>
+              <div class="checklist-text">
+                <strong>NO Audio, Video, or Screen Recording:</strong>
+                The service does not capture audio streams, video frames, or screenshots of the content being viewed.
+              </div>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon">🚫</span>
+              <div class="checklist-text">
+                <strong>NO Interception Outside Short-Video Containers:</strong>
+                When you navigate away from Instagram Reels or YouTube Shorts (e.g. to your home feed, profile, or any other app), tracking is instantly dormant.
+              </div>
+            </li>
+          </ul>
+
+          <p>
+            <strong>User Consent &amp; Control:</strong> The Accessibility Service can be toggled on or off at any moment by navigating to <em>Settings &rarr; Accessibility &rarr; ScrollCount</em> on your Android phone.
+          </p>
+        </section>
+
+        <!-- 3. Absolute Offline Architecture -->
+        <section id="zero-internet" class="policy-section">
+          <div class="section-header">
+            <div class="section-number">03</div>
+            <h2>Absolute Offline Guarantee: Zero Internet Permission</h2>
+          </div>
+          <p>
+            Unlike most wellbeing apps that upload analytics to cloud dashboards, ScrollCount takes an uncompromising architectural stance:
+          </p>
+
+          <div class="callout-box">
+            <div class="callout-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>Verified AndroidManifest Declaration</span>
+            </div>
+            <p>
+              ScrollCount's <code>AndroidManifest.xml</code> does <strong>NOT declare <code>android.permission.INTERNET</code></strong>. Under Android's security sandbox model, an application without this permission is physically prevented by the Linux operating system kernel from opening internet sockets, making HTTP requests, or transmitting data.
+            </p>
+          </div>
+
+          <p>
+            Even if an attacker or malicious code existed in the application, <strong>it is technically impossible for ScrollCount to communicate with remote servers or leak your statistics</strong>.
+          </p>
+        </section>
+
+        <!-- 4. Zero Data Collection Disclosures -->
+        <section id="data-collection" class="policy-section">
+          <div class="section-header">
+            <div class="section-number">04</div>
+            <h2>Data Collection &amp; Safety Disclosures</h2>
+          </div>
+          <p>
+            In accordance with Google Play Console Data Safety standards, the following disclosures apply:
+          </p>
+
+          <div class="table-responsive">
+            <table class="compliance-table">
+              <thead>
+                <tr>
+                  <th>Data Type</th>
+                  <th>Collected by App?</th>
+                  <th>Shared Remotely?</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Personal Identifiers</strong> (Name, Email, Phone)</td>
+                  <td><span class="status-badge status-zero">🚫 NO</span></td>
+                  <td><span class="status-badge status-zero">🚫 NO</span></td>
+                  <td>None (Zero signup)</td>
+                </tr>
+                <tr>
+                  <td><strong>User Content &amp; Media</strong> (Photos, Chats, Posts)</td>
+                  <td><span class="status-badge status-zero">🚫 NO</span></td>
+                  <td><span class="status-badge status-zero">🚫 NO</span></td>
+                  <td>None</td>
+                </tr>
+                <tr>
+                  <td><strong>Keystrokes &amp; Passwords</strong></td>
+                  <td><span class="status-badge status-zero">🚫 NO</span></td>
+                  <td><span class="status-badge status-zero">🚫 NO</span></td>
+                  <td>Strictly excluded</td>
+                </tr>
+                <tr>
+                  <td><strong>Financial &amp; Payment Data</strong></td>
+                  <td><span class="status-badge status-zero">🚫 NO</span></td>
+                  <td><span class="status-badge status-zero">🚫 NO</span></td>
+                  <td>Free utility</td>
+                </tr>
+                <tr>
+                  <td><strong>Precise / Coarse Location (GPS/IP)</strong></td>
+                  <td><span class="status-badge status-zero">🚫 NO</span></td>
+                  <td><span class="status-badge status-zero">🚫 NO</span></td>
+                  <td>None</td>
+                </tr>
+                <tr>
+                  <td><strong>Short-Video View Duration &amp; Scroll Count</strong></td>
+                  <td><span class="status-badge" style="background: rgba(139, 92, 246, 0.15); color: #ddd6fe; border: 1px solid rgba(139, 92, 246, 0.3);">Local Only</span></td>
+                  <td><span class="status-badge status-zero">🚫 NO</span></td>
+                  <td>Calculates your personal daily screen-time stats</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 5. Android Permissions Breakdown -->
+        <section id="permissions" class="policy-section">
+          <div class="section-header">
+            <div class="section-number">05</div>
+            <h2>Android Permissions Breakdown</h2>
+          </div>
+          <p>
+            ScrollCount requests the minimum set of permissions necessary to function:
+          </p>
+
+          <div class="permission-grid">
+            <div class="permission-card">
+              <span class="permission-tag">BIND_ACCESSIBILITY_SERVICE</span>
+              <h4>Video Session Detection</h4>
+              <p>Detects when Reels or Shorts video containers appear in the foreground to measure elapsed watch time and count scrolls. Never captures chats, audio, or passwords.</p>
+            </div>
+
+            <div class="permission-card">
+              <span class="permission-tag">POST_NOTIFICATIONS (Android 13+)</span>
+              <h4>Habit &amp; Limit Alerts</h4>
+              <p>Used solely to display local reminder notifications when you reach your self-imposed daily scrolling threshold (e.g. "30 minutes reached today").</p>
+            </div>
+
+            <div class="permission-card">
+              <span class="permission-tag denied">INTERNET (NOT REQUESTED)</span>
+              <h4>Network Access: Disabled</h4>
+              <p>This permission is omitted from the application manifest. The app has zero network capability and cannot transmit data outside your physical phone.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Local Storage & Deletion -->
+        <section id="local-storage" class="policy-section">
+          <div class="section-header">
+            <div class="section-number">06</div>
+            <h2>Local Data Retention &amp; Erasure</h2>
+          </div>
+          <p>
+            All generated statistics (number of videos watched per day, time spent per platform, custom limit thresholds) are saved in your device's private SQLite database:
+          </p>
+          <ul class="checklist">
+            <li class="checklist-item">
+              <span class="checklist-icon">✔</span>
+              <div class="checklist-text">
+                <strong>Private Application Sandbox:</strong>
+                Data is locked inside Android's internal app sandbox (<code>/data/data/com.techhub.scrollcount/</code>), inaccessible to other apps installed on your phone.
+              </div>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon">✔</span>
+              <div class="checklist-text">
+                <strong>Instant 1-Tap Reset:</strong>
+                You can reset your stats or delete all recorded days at any point from ScrollCount's in-app settings.
+              </div>
+            </li>
+            <li class="checklist-item">
+              <span class="checklist-icon">✔</span>
+              <div class="checklist-text">
+                <strong>Complete Erasure on Uninstall:</strong>
+                Uninstalling ScrollCount automatically erases all databases, preferences, and cached statistics completely from flash storage.
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 7. Zero Third-Party SDKs & No Ads -->
+        <section id="no-trackers" class="policy-section">
+          <div class="section-header">
+            <div class="section-number">07</div>
+            <h2>Zero Third-Party SDKs &amp; Zero Advertising</h2>
+          </div>
+          <p>
+            ScrollCount is completely self-contained:
+          </p>
+          <p>
+            &bull; <strong>No Analytics Telemetry:</strong> No Google Analytics for Firebase, Mixpanel, Segment, or Flurry.
+            <br>
+            &bull; <strong>No Social Trackers:</strong> No Meta/Facebook SDK or TikTok SDK.
+            <br>
+            &bull; <strong>No Ad Networks:</strong> No AdMob, Start.io, Unity, or third-party ad bidding SDKs.
+            <br>
+            &bull; <strong>No Crash Telemetry SDKs:</strong> No third-party crash reporters phoning home.
+          </p>
+          <p>
+            The app is clean, quiet, and operates entirely on your terms.
+          </p>
+        </section>
+
+        <!-- 8. Children's Privacy -->
+        <section id="children" class="policy-section">
+          <div class="section-header">
+            <div class="section-number">08</div>
+            <h2>Children's Privacy Protection (COPPA)</h2>
+          </div>
+          <p>
+            ScrollCount does not collect personal information from any user, including children under 13 years of age. Because the application does not have user accounts, online messaging, or network sockets, it is fully safe for individuals of all age groups.
+          </p>
+        </section>
+
+        <!-- 9. Global Privacy Rights -->
+        <section id="user-rights" class="policy-section">
+          <div class="section-header">
+            <div class="section-number">09</div>
+            <h2>Global Privacy Rights (GDPR &amp; CCPA)</h2>
+          </div>
+          <p>
+            Under GDPR (EU) and CCPA/CPRA (California), users have the right to access, rectify, or delete their personal records:
+          </p>
+          <p>
+            Because we do not store, ingest, or process any information on remote servers, your statutory rights are completely honored by design: you already hold 100% of your data on your phone and can inspect or wipe it at will.
+          </p>
+        </section>
+
+        <!-- 10. Contact & Support -->
+        <section id="contact" class="policy-section">
+          <div class="section-header">
+            <div class="section-number">10</div>
+            <h2>Developer Identity, Policy Updates &amp; Contact</h2>
+          </div>
+          <p>
+            If we make any modifications to this Privacy Policy, the revised document will be posted immediately at this public URL with an updated effective date.
+          </p>
+          <p>
+            For any inquiries, feedback, or accessibility compliance questions, please contact our developer desk:
+          </p>
+
+          <div class="contact-card">
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-details">
+                <h4>Support Email</h4>
+                <a href="mailto:krishnatechhub@gmail.com">krishnatechhub@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">🏢</div>
+              <div class="contact-details">
+                <h4>Developer Entity</h4>
+                <span>Krishna Tech Hub</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">🌐</div>
+              <div class="contact-details">
+                <h4>Official Website</h4>
+                <a href="https://krishna-techhub.github.io/">krishna-techhub.github.io</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div class="contact-details">
+                <h4>Application Package</h4>
+                <a href="https://play.google.com/store/apps/details?id=com.techhub.scrollcount" target="_blank" rel="noopener noreferrer">com.techhub.scrollcount</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="brand">
+            <a href="assets/brand/krishna-tech-hub-neon-logo.png" target="_blank" class="brand-icon logo-trigger" aria-label="Open Krishna Tech Hub Official Logo" title="Click to view Krishna Tech Hub Official Logo">
+              <img src="assets/brand/header-k-icon.png" alt="Krishna Tech Hub">
+            </a>
+            <a href="index.html" class="brand-meta" aria-label="Krishna Tech Hub Homepage">
+              <span class="brand-title">Krishna Tech Hub</span>
+              <span class="brand-subtitle">Official Developer Hub</span>
+            </a>
+          </div>
+          <p class="footer-desc">
+            Building privacy-first, blazing fast Android utilities. Native performance, sandboxed offline architectures, zero tracking.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h5>Applications</h5>
+            <ul class="footer-links-list">
+              <li class="footer-link-item"><a href="https://play.google.com/store/apps/details?id=com.pdfhub" target="_blank" rel="noopener noreferrer">PDF Hub</a></li>
+              <li class="footer-link-item"><a href="https://play.google.com/store/apps/details?id=com.qr.hub" target="_blank" rel="noopener noreferrer">QR Hub</a></li>
+              <li class="footer-link-item"><a href="https://play.google.com/store/apps/details?id=com.techhub.scrollcount" target="_blank" rel="noopener noreferrer">ScrollCount</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Legal &amp; Privacy</h5>
+            <ul class="footer-links-list">
+              <li class="footer-link-item"><a href="pdf-hub-privacy-policy.html">PDF Hub Policy</a></li>
+              <li class="footer-link-item"><a href="qr-hub-privacy-policy.html">QR Hub Policy</a></li>
+              <li class="footer-link-item"><a href="qr-hub-terms.html">QR Hub Terms</a></li>
+              <li class="footer-link-item"><a href="scrollcount-privacy-policy.html" style="color: var(--accent-purple-light); font-weight: 700;">ScrollCount Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Compliance &amp; Trust</h5>
+            <ul class="footer-links-list">
+              <li class="footer-link-item"><a href="app-ads.txt">app-ads.txt (AdMob)</a></li>
+              <li class="footer-link-item"><a href="https://github.com/krishna-techhub" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
+              <li class="footer-link-item"><a href="mailto:krishnatechhub@gmail.com">Developer Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Krishna Tech Hub. All rights reserved. ScrollCount is an independent digital wellbeing utility.</p>
+        <p>Hosted securely on GitHub Pages with HTTPS.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Logo Lightbox Modal -->
+  <div class="logo-modal-backdrop" id="logoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="logoModalTitle">
+    <div class="logo-modal-card">
+      <button type="button" class="logo-modal-close" id="logoModalClose" aria-label="Close Logo Preview">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="logo-modal-image-wrap">
+        <img src="assets/brand/krishna-tech-hub-neon-logo.png" alt="Krishna Tech Hub Neon Logo" id="logoModalImg">
+      </div>
+      <h3 class="logo-modal-title" id="logoModalTitle">Krishna Tech Hub</h3>
+      <p class="logo-modal-subtitle">Official Developer Brand Emblem</p>
+      <div class="logo-modal-actions">
+        <a href="assets/brand/krishna-tech-hub-neon-logo.png" target="_blank" rel="noopener noreferrer" class="logo-modal-btn logo-modal-btn-primary" id="logoModalOpenBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <span>Open Full Image</span>
+        </a>
+        <a href="assets/brand/krishna-tech-hub-neon-logo.png" download="krishna-tech-hub-logo.png" class="logo-modal-btn logo-modal-btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Download Asset</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Logo Modal Functionality
+      const logoModal = document.getElementById('logoModal');
+      const logoModalClose = document.getElementById('logoModalClose');
+
+      function openLogoModal(e) {
+        if (e) {
+          if (e.ctrlKey || e.metaKey || e.button === 1) return;
+          e.preventDefault();
+        }
+        if (logoModal) {
+          logoModal.classList.add('active');
+          logoModal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeLogoModal() {
+        if (logoModal) {
+          logoModal.classList.remove('active');
+          logoModal.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }
+      }
+
+      document.querySelectorAll('.logo-trigger').forEach((trigger) => {
+        trigger.addEventListener('click', openLogoModal);
+      });
+
+      if (logoModalClose) {
+        logoModalClose.addEventListener('click', closeLogoModal);
+      }
+
+      if (logoModal) {
+        logoModal.addEventListener('click', (e) => {
+          if (e.target === logoModal) closeLogoModal();
+        });
+      }
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && logoModal && logoModal.classList.contains('active')) {
+          closeLogoModal();
+        }
+      });
+
+      // Active TOC Scroll Spy Script
+      const sections = document.querySelectorAll('.policy-section');
+      const navLinks = document.querySelectorAll('.toc-item');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const currentId = entry.target.getAttribute('id');
+            navLinks.forEach((item) => {
+              const link = item.querySelector('a');
+              if (link.getAttribute('href') === `#${currentId}`) {
+                item.classList.add('active');
+              } else {
+                item.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, {
+        rootMargin: '-20% 0px -70% 0px'
+      });
+
+      sections.forEach((section) => observer.observe(section));
+    });
+  </script>
 
 </body>
 </html>

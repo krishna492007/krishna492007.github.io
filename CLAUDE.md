@@ -1,32 +1,44 @@
 # Krishna Tech Hub — Developer Website & Policies
 
 ## Project Overview
-Official GitHub Pages website (`https://krishna492007.github.io`) showcasing 3 Android apps, serving privacy policies, terms of service, and AdMob `app-ads.txt` crawler compliance.
+Official GitHub Pages developer portal (`https://krishna-techhub.github.io`) showcasing 3 Android apps, serving privacy policies, terms of service, and Google AdMob `app-ads.txt` crawler compliance.
 
 ## Applications
 - **PDF Hub : PDF Editor & Tools** (`com.pdfhub`) — Policy: `pdf-hub-privacy-policy.html`
 - **QR Hub : Ultimate QR & Barcode Studio** (`com.qr.hub`) — Policy: `qr-hub-privacy-policy.html`, Terms: `qr-hub-terms.html`
 - **ScrollCount : Reels & Shorts Tracker** (`com.techhub.scrollcount`) — Policy: `scrollcount-privacy-policy.html`
 
-## Architecture & Key Files
-- `index.html`: Main landing page (Vercel/Linear dark theme, glassmorphism, responsive).
-- `assets/images/`: 3D app icons (`pdf-hub-icon.png`, `qr-hub-icon.png`, `scrollcount-icon.png`) and promo banners.
-- `app-ads.txt`: AdMob publisher verification (`pub-5378252094188023`).
-- `.nojekyll` & `_config.yml`: Ensures GitHub Pages correctly serves root assets without Jekyll processing.
+## Architecture & Directory Structure
+- `index.html`: Main developer showcase landing page (Vercel/Linear dark theme, glassmorphism, responsive down to 320px).
+- `assets/brand/`: Official brand emblem, logos, and web icons:
+  - `krishna-tech-hub-neon-logo.png`: High-resolution official neon emblem.
+  - `header-k-icon.png`, `glossy-k-icon.png`: Header and card icons.
+  - `favicon.ico`, `favicon-32x32.png`: Root and branding favicons.
+- `assets/apps/`: App-specific assets organized by slug:
+  - `pdf-hub/`: `icon.png`, `banner.png`, `favicons/` (complete multi-resolution icon kit)
+  - `qr-hub/`: `icon.png`, `banner.png`, `favicons/` (complete multi-resolution icon kit)
+  - `scrollcount/`: `icon.png`, `favicons/` (complete multi-resolution icon kit)
+- `app-ads.txt`: AdMob publisher verification string (`google.com, pub-5378252094188023, DIRECT, f08c47fec0942fa0`).
+- `.nojekyll` & `_config.yml`: Prevents Jekyll processing on GitHub Pages to serve root and static assets reliably.
+- `favicon.ico`: Root-level W3C standard favicon preventing browser/crawler 404 errors.
 
-## Development & Deployment
-- Static HTML5/CSS3/Vanilla JS — zero build step required.
-- Test locally by opening `index.html` in any browser.
-- Deployed via GitHub Pages from repository `krishna492007/krishna492007.github.io`.
+## Design System & Coding Standards
+- **Aesthetic:** Dark glassmorphism (`rgba(17, 24, 39, 0.75)`, `backdrop-filter: blur(16px)`), modern typography (Inter / Plus Jakarta Sans), neon glowing borders.
+- **Responsiveness:** 100% fluid layouts down to 320px mobile viewports (`min-width: 0` on flex items, `@media (max-width: 480px)` and `@media (max-width: 640px)`). Zero horizontal scroll.
+- **Zero Build Step:** Plain HTML5, CSS3, and Vanilla JavaScript with progressive enhancement.
+- **Interactive Logo Lightbox:** Any `.logo-trigger` element opens the high-res neon logo modal with view/download actions.
 
-## Git Deploy Commands
-```bash
-git add .
-git commit -m "Update site"
-git push origin main
-```
+## Deployment & Git Workflow
+- Hosted via GitHub Pages from repository `krishna-techhub/krishna-techhub.github.io` on branch `main`.
+- Deploy commands:
+  ```bash
+  git add .
+  git commit -m "Update site"
+  git push origin main
+  ```
 
-## Contact & Identity
-- Developer Name: Krishna Tech Hub
+## Contact & Developer Identity
+- Developer Entity: Krishna Tech Hub
 - Support Email: `krishnatechhub@gmail.com`
-- GitHub Profile: `https://github.com/krishna492007`
+- GitHub Organization/Profile: `https://github.com/krishna-techhub`
+- Live Website: `https://krishna-techhub.github.io/`

@@ -8,14 +8,14 @@
   <meta property="og:title" content="Krishna Tech Hub — Modern &amp; Private Android Apps">
   <meta property="og:description" content="Official home of PDF Hub, QR Hub, and ScrollCount. 100% private, offline-first Android utilities designed for everyday productivity.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://krishna492007.github.io/">
-  <meta property="og:image" content="https://krishna492007.github.io/assets/images/dev_web/krishna-tech-hub-neon-logo.png">
+  <meta property="og:url" content="https://krishna-techhub.github.io/">
+  <meta property="og:image" content="https://krishna-techhub.github.io/assets/brand/krishna-tech-hub-neon-logo.png">
   <title>Krishna Tech Hub — Official Developer Website</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dev_web/favicon-32x32.png">
-  <link rel="apple-touch-icon" href="assets/images/dev_web/header-k-icon.png">
+  <link rel="icon" type="image/x-icon" href="assets/brand/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="assets/brand/header-k-icon.png">
 
   <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -133,19 +133,33 @@
       font-weight: 800;
       font-size: 1.15rem;
       letter-spacing: -0.02em;
+      text-decoration: none;
+      transition: transform 0.25s ease;
+    }
+
+    .brand:hover {
+      transform: translateY(-1px);
     }
 
     .brand-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: var(--radius-md);
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(14, 18, 27, 0.9);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       flex-shrink: 0;
-      background: transparent;
+    }
+
+    .brand:hover .brand-icon {
+      box-shadow: 0 6px 24px rgba(56, 189, 248, 0.55);
+      border-color: rgba(56, 189, 248, 0.45);
+      transform: scale(1.05);
     }
 
     .brand-icon img {
@@ -162,15 +176,20 @@
     }
 
     .brand-title {
-      color: var(--text-main);
+      color: #ffffff;
       font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff 40%, #bae6fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .brand-subtitle {
-      font-size: 0.75rem;
-      color: var(--text-dim);
-      font-weight: 600;
-      letter-spacing: 0.05em;
+      font-size: 0.72rem;
+      color: #38bdf8;
+      font-weight: 700;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
@@ -195,20 +214,24 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 9px 18px;
-      border-radius: var(--radius-sm);
-      font-size: 0.85rem;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 0.84rem;
       font-weight: 700;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid var(--border-highlight);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
       color: var(--text-main);
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
     }
 
     .nav-cta:hover {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(56, 189, 248, 0.45);
+      box-shadow: 0 4px 18px rgba(56, 189, 248, 0.25);
+      transform: translateY(-2px);
+      color: #ffffff;
     }
 
     /* Hero Section */
@@ -411,6 +434,18 @@
       grid-template-columns: 1fr 340px;
       gap: 40px;
       align-items: center;
+      cursor: pointer;
+    }
+
+    .app-card:focus-visible {
+      outline: 2px solid var(--accent-blue);
+      outline-offset: 4px;
+    }
+
+    .app-card .store-btn,
+    .app-card .legal-link-item {
+      position: relative;
+      z-index: 5;
     }
 
     .app-card::before {
@@ -599,22 +634,24 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      background: #0f172a;
+      background: linear-gradient(180deg, #131a29 0%, #0b101b 100%);
       color: #ffffff;
       padding: 14px 20px;
       border-radius: var(--radius-md);
       font-weight: 700;
       font-size: 0.95rem;
       border: 1px solid rgba(255, 255, 255, 0.18);
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+      text-decoration: none;
     }
 
     .store-btn:hover {
-      background: #1e293b;
-      border-color: rgba(255, 255, 255, 0.35);
+      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      border-color: rgba(56, 189, 248, 0.45);
       transform: translateY(-2px);
-      color: #38bdf8;
+      box-shadow: 0 8px 24px rgba(56, 189, 248, 0.25);
+      color: #ffffff;
     }
 
     .store-btn svg {
@@ -627,31 +664,76 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-subtle);
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .legal-link-item {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      color: var(--text-muted);
-      font-size: 0.85rem;
+      color: #cbd5e1;
+      font-size: 0.86rem;
       font-weight: 600;
-      padding: 6px 8px;
-      border-radius: var(--radius-sm);
-      transition: all 0.15s ease;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     }
 
-    .legal-link-item:hover {
-      color: var(--text-main);
-      background: rgba(255, 255, 255, 0.05);
+    .legal-link-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .legal-link-item svg {
-      width: 14px;
-      height: 14px;
+    .legal-link-icon {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.8;
+      flex-shrink: 0;
+    }
+
+    .pdf-hub .legal-link-item:hover {
+      color: #ffffff;
+      background: rgba(239, 68, 68, 0.14);
+      border-color: rgba(239, 68, 68, 0.4);
+      transform: translateX(3px);
+      box-shadow: 0 4px 14px rgba(239, 68, 68, 0.2);
+    }
+
+    .qr-hub .legal-link-item:hover {
+      color: #ffffff;
+      background: rgba(245, 158, 11, 0.14);
+      border-color: rgba(245, 158, 11, 0.4);
+      transform: translateX(3px);
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.2);
+    }
+
+    .scrollcount .legal-link-item:hover {
+      color: #ffffff;
+      background: rgba(139, 92, 246, 0.14);
+      border-color: rgba(139, 92, 246, 0.4);
+      transform: translateX(3px);
+      box-shadow: 0 4px 14px rgba(139, 92, 246, 0.2);
+    }
+
+    .legal-link-item svg.legal-chevron {
+      width: 15px;
+      height: 15px;
       opacity: 0.6;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .legal-link-item:hover svg.legal-chevron {
+      opacity: 1;
+      transform: translateX(3px);
     }
 
     /* Philosophy / Standards Section */
@@ -716,123 +798,419 @@
     .compliance-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 28px;
       margin-bottom: 80px;
     }
 
     .compliance-card {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 32px;
+      border-radius: var(--radius-xl);
+      padding: 34px;
       backdrop-filter: var(--blur-glass);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .compliance-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-xl);
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent 70%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .compliance-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-highlight);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
     }
 
     .compliance-header {
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 16px;
+      gap: 16px;
+      margin-bottom: 18px;
     }
 
-    .compliance-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: rgba(16, 185, 129, 0.1);
-      border: 1px solid rgba(16, 185, 129, 0.25);
-      color: #10b981;
+    .emblem-wrapper {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.45);
+      border: 2px solid rgba(6, 182, 212, 0.5);
+      background: #000;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: transform 0.3s ease;
     }
 
-    .compliance-card h3 {
-      font-size: 1.25rem;
+    .compliance-card:hover .emblem-wrapper {
+      transform: scale(1.05);
+      box-shadow: 0 0 28px rgba(6, 182, 212, 0.65);
+    }
+
+    .emblem-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .compliance-header-text h3 {
+      font-size: 1.3rem;
       font-weight: 800;
       color: var(--text-main);
+      letter-spacing: -0.02em;
+      margin-bottom: 5px;
     }
 
-    .compliance-card p {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-
-    .code-badge {
+    .status-pill-verified {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
+      gap: 7px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .status-pill-support {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.32);
       color: #93c5fd;
-      border: 1px solid rgba(147, 197, 253, 0.2);
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .support-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #60a5fa;
+      box-shadow: 0 0 8px #60a5fa;
+    }
+
+    .compliance-desc {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* AdMob verification strip */
+    .admob-pub-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+    }
+
+    .pub-id-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .pub-label {
+      font-size: 0.68rem;
+      color: #94a3b8;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .pub-id-code {
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
+    .pub-badge-direct {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: #34d399;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .action-btn-compliance {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #f1f5f9;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .action-btn-compliance:hover {
+      background: rgba(6, 182, 212, 0.12);
+      border-color: rgba(6, 182, 212, 0.45);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(6, 182, 212, 0.25);
+    }
+
+    .action-arrow {
+      transition: transform 0.2s ease;
+    }
+
+    .action-btn-compliance:hover .action-arrow {
+      transform: translate(2px, -2px);
+    }
+
+    /* Support card specific styles */
+    .compliance-icon-support {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
+      transition: transform 0.3s ease;
+    }
+
+    .compliance-card:hover .compliance-icon-support {
+      transform: scale(1.05);
+      box-shadow: 0 0 26px rgba(59, 130, 246, 0.45);
+    }
+
+    .support-buttons-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .support-pill-email {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 12px 18px;
+      border-radius: 12px;
+      color: #f1f5f9;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .support-pill-email:hover {
+      background: rgba(59, 130, 246, 0.12);
+      border-color: rgba(59, 130, 246, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.25);
+      color: #ffffff;
+    }
+
+    .email-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .email-icon-box {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .email-text-box {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      text-align: left;
+    }
+
+    .email-label {
+      font-size: 0.68rem;
+      color: #94a3b8;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .email-address {
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      color: #e2e8f0;
+      font-weight: 700;
+    }
+
+    .email-action-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #60a5fa;
+      background: rgba(59, 130, 246, 0.12);
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      flex-shrink: 0;
+    }
+
+    .support-btn-github {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 12px 18px;
+      border-radius: 12px;
+      color: #cbd5e1;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .support-btn-github:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .github-btn-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     /* Footer */
     .footer {
       border-top: 1px solid var(--border-subtle);
-      background: rgba(5, 7, 11, 0.95);
-      padding: 60px 0 40px;
+      background: rgba(5, 7, 11, 0.98);
+      padding: 70px 0 40px;
       font-size: 0.88rem;
+      position: relative;
     }
 
     .footer-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1.4fr 2.6fr;
+      gap: 60px;
+      margin-bottom: 50px;
+      align-items: start;
     }
 
     .footer-brand-col {
-      max-width: 380px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
     .footer-desc {
       color: var(--text-dim);
-      margin-top: 12px;
-      line-height: 1.5;
+      line-height: 1.6;
+      font-size: 0.9rem;
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: #34d399;
+      font-size: 0.75rem;
+      font-weight: 700;
+      width: fit-content;
     }
 
     .footer-links-group {
-      display: flex;
-      gap: 50px;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
     }
 
     .footer-col h5 {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--text-main);
-      margin-bottom: 14px;
+      color: #ffffff;
+      margin-bottom: 16px;
     }
 
     .footer-links-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 11px;
     }
 
     .footer-links-list a {
       color: var(--text-muted);
-      transition: color 0.2s ease;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .footer-links-list a:hover {
-      color: var(--accent-blue);
+      color: #38bdf8;
+      transform: translateX(2px);
     }
 
     .footer-bottom {
-      padding-top: 28px;
+      padding-top: 30px;
       border-top: 1px solid var(--border-subtle);
       display: flex;
       justify-content: space-between;
@@ -841,6 +1219,20 @@
       font-size: 0.82rem;
       flex-wrap: wrap;
       gap: 16px;
+    }
+
+    .footer-bottom-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
     }
 
     /* Responsive adjustments */
@@ -860,11 +1252,9 @@
         flex: 1 1 240px;
       }
       .legal-links-box {
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex: 1 1 240px;
         border-top: none;
         padding-top: 0;
-        gap: 14px;
       }
       .trust-strip {
         grid-template-columns: 1fr;
@@ -875,6 +1265,11 @@
       }
       .compliance-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 40px;
       }
     }
 
@@ -908,6 +1303,258 @@
       .philosophy-section {
         padding: 35px 20px;
       }
+      .footer-links-group {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: calc(100% - 24px);
+      }
+      .header {
+        padding: 0 4px;
+      }
+      .nav-container {
+        height: 64px;
+      }
+      .brand {
+        gap: 10px;
+      }
+      .brand-icon {
+        width: 38px;
+        height: 38px;
+      }
+      .brand-title {
+        font-size: 1.05rem;
+      }
+      .brand-subtitle {
+        font-size: 0.65rem;
+      }
+      .nav-cta {
+        padding: 6px 12px;
+        font-size: 0.78rem;
+      }
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-desc {
+        font-size: 0.95rem;
+      }
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .app-card {
+        padding: 20px 16px;
+        border-radius: var(--radius-lg);
+      }
+      .app-meta-header {
+        gap: 14px;
+      }
+      .app-icon-wrapper {
+        width: 54px;
+        height: 54px;
+        border-radius: 14px;
+      }
+      .app-heading-group h3 {
+        font-size: 1.35rem;
+      }
+      .app-card-right {
+        padding: 16px;
+      }
+      .store-btn {
+        flex: 1 1 100%;
+        width: 100%;
+      }
+      .legal-links-box {
+        flex: 1 1 100%;
+        width: 100%;
+      }
+      .compliance-card {
+        padding: 22px 18px;
+      }
+      .admob-pub-strip {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .support-pill-email {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .support-btn-github {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .footer {
+        padding: 45px 0 30px;
+      }
+      .footer-links-group {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+    }
+
+    /* Logo Lightbox Modal */
+    .logo-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 6, 10, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+    }
+
+    .logo-modal-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .logo-modal-card {
+      background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(10, 15, 25, 0.98) 100%);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 24px;
+      padding: 38px 32px 32px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 50px -10px rgba(6, 182, 212, 0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transform: scale(0.92);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .logo-modal-backdrop.active .logo-modal-card {
+      transform: scale(1);
+    }
+
+    .logo-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .logo-modal-close:hover {
+      background: rgba(239, 68, 68, 0.2);
+      border-color: rgba(239, 68, 68, 0.4);
+      color: #ffffff;
+      transform: rotate(90deg);
+    }
+
+    .logo-modal-image-wrap {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 22px;
+      box-shadow: 0 0 35px rgba(6, 182, 212, 0.5), inset 0 0 20px rgba(6, 182, 212, 0.3);
+      border: 3px solid rgba(6, 182, 212, 0.6);
+      background: #000000;
+      position: relative;
+    }
+
+    .logo-modal-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .logo-modal-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-modal-subtitle {
+      font-size: 0.85rem;
+      color: #38bdf8;
+      font-weight: 600;
+      margin-bottom: 24px;
+      letter-spacing: 0.04em;
+    }
+
+    .logo-modal-actions {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .logo-modal-btn {
+      flex: 1 1 180px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .logo-modal-btn-primary {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #ffffff;
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+    }
+
+    .logo-modal-btn-primary:hover {
+      box-shadow: 0 6px 22px rgba(37, 99, 235, 0.55);
+      transform: translateY(-2px);
+      color: #ffffff;
+    }
+
+    .logo-modal-btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .logo-modal-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      transform: translateY(-2px);
     }
   </style>
 </head>
@@ -919,22 +1566,22 @@
   <!-- Header -->
   <header class="header">
     <div class="container nav-container">
-      <a href="#top" class="brand" aria-label="Krishna Tech Hub Homepage">
-        <div class="brand-icon" aria-hidden="true">
-          <img src="assets/images/dev_web/header-k-icon.png" alt="Krishna Tech Hub">
-        </div>
-        <div class="brand-meta">
+      <div class="brand">
+        <a href="assets/brand/krishna-tech-hub-neon-logo.png" target="_blank" class="brand-icon logo-trigger" aria-label="Open Krishna Tech Hub Official Logo" title="Click to view Krishna Tech Hub Official Logo">
+          <img src="assets/brand/header-k-icon.png" alt="Krishna Tech Hub">
+        </a>
+        <a href="#top" class="brand-meta" aria-label="Krishna Tech Hub Homepage">
           <span class="brand-title">Krishna Tech Hub</span>
           <span class="brand-subtitle">Official Developer Hub</span>
-        </div>
-      </a>
+        </a>
+      </div>
       <nav class="nav-links" aria-label="Main Navigation">
         <a href="#apps" class="nav-link">Our Apps</a>
         <a href="#standards" class="nav-link">Our Standards</a>
         <a href="#compliance" class="nav-link">Developer Info</a>
         <a href="#support" class="nav-link">Contact</a>
       </nav>
-      <a href="https://github.com/krishna492007" target="_blank" rel="noopener noreferrer" class="nav-cta" aria-label="GitHub Profile">
+      <a href="https://github.com/krishna-techhub" target="_blank" rel="noopener noreferrer" class="nav-cta" aria-label="GitHub Profile">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
         </svg>
@@ -1013,11 +1660,11 @@
       <div class="apps-grid">
 
         <!-- App 1: PDF HUB -->
-        <article class="app-card pdf-hub" id="pdf-hub">
+        <article class="app-card pdf-hub" id="pdf-hub" data-href="pdf-hub-privacy-policy.html" role="link" tabindex="0" aria-label="Open PDF Hub Policy and Details">
           <div class="app-card-left">
             <div class="app-meta-header">
               <div class="app-icon-wrapper">
-                <img src="assets/images/pdf-hub-icon.png" alt="PDF Hub App Icon" class="app-icon-img" loading="lazy">
+                <img src="assets/apps/pdf-hub/icon.png" alt="PDF Hub App Icon" class="app-icon-img" loading="lazy">
               </div>
               <div class="app-heading-group">
                 <h3>
@@ -1074,19 +1721,24 @@
 
             <div class="legal-links-box">
               <a href="pdf-hub-privacy-policy.html" class="legal-link-item">
-                <span>Privacy Policy</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                <div class="legal-link-left">
+                  <span class="legal-link-icon">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  <span>Privacy Policy</span>
+                </div>
+                <svg class="legal-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
               </a>
             </div>
           </div>
         </article>
 
         <!-- App 2: QR HUB -->
-        <article class="app-card qr-hub" id="qr-hub">
+        <article class="app-card qr-hub" id="qr-hub" data-href="qr-hub-privacy-policy.html" role="link" tabindex="0" aria-label="Open QR Hub Policy and Details">
           <div class="app-card-left">
             <div class="app-meta-header">
               <div class="app-icon-wrapper">
-                <img src="assets/images/qr-hub-icon.png" alt="QR Hub App Icon" class="app-icon-img" loading="lazy">
+                <img src="assets/apps/qr-hub/icon.png" alt="QR Hub App Icon" class="app-icon-img" loading="lazy">
               </div>
               <div class="app-heading-group">
                 <h3>
@@ -1143,23 +1795,33 @@
 
             <div class="legal-links-box">
               <a href="qr-hub-privacy-policy.html" class="legal-link-item">
-                <span>Privacy Policy</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                <div class="legal-link-left">
+                  <span class="legal-link-icon">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  <span>Privacy Policy</span>
+                </div>
+                <svg class="legal-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
               </a>
               <a href="qr-hub-terms.html" class="legal-link-item">
-                <span>Terms of Use</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                <div class="legal-link-left">
+                  <span class="legal-link-icon">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  </span>
+                  <span>Terms of Use</span>
+                </div>
+                <svg class="legal-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
               </a>
             </div>
           </div>
         </article>
 
         <!-- App 3: SCROLLCOUNT -->
-        <article class="app-card scrollcount" id="scrollcount">
+        <article class="app-card scrollcount" id="scrollcount" data-href="scrollcount-privacy-policy.html" role="link" tabindex="0" aria-label="Open ScrollCount Policy and Details">
           <div class="app-card-left">
             <div class="app-meta-header">
               <div class="app-icon-wrapper">
-                <img src="assets/images/scrollcount-icon.png" alt="ScrollCount App Icon" class="app-icon-img" loading="lazy">
+                <img src="assets/apps/scrollcount/icon.png" alt="ScrollCount App Icon" class="app-icon-img" loading="lazy">
               </div>
               <div class="app-heading-group">
                 <h3>
@@ -1216,8 +1878,13 @@
 
             <div class="legal-links-box">
               <a href="scrollcount-privacy-policy.html" class="legal-link-item">
-                <span>Privacy Policy</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                <div class="legal-link-left">
+                  <span class="legal-link-icon">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  <span>Privacy Policy</span>
+                </div>
+                <svg class="legal-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
               </a>
             </div>
           </div>
@@ -1267,46 +1934,78 @@
 
       <div class="compliance-grid">
         <div class="compliance-card">
-          <div class="compliance-header">
-            <div style="width: 52px; height: 52px; border-radius: 50%; overflow: hidden; flex-shrink: 0; box-shadow: 0 0 18px rgba(6, 182, 212, 0.45); border: 2px solid rgba(6, 182, 212, 0.45);">
-              <img src="assets/images/dev_web/krishna-tech-hub-neon-logo.png" alt="Krishna Tech Hub Emblem" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div>
+            <div class="compliance-header">
+              <a href="assets/brand/krishna-tech-hub-neon-logo.png" target="_blank" class="emblem-wrapper logo-trigger" aria-label="Open Krishna Tech Hub Official Emblem" title="Click to view Krishna Tech Hub Official Emblem">
+                <img src="assets/brand/krishna-tech-hub-neon-logo.png" alt="Krishna Tech Hub Emblem" class="emblem-img">
+              </a>
+              <div class="compliance-header-text">
+                <h3>AdMob &amp; Store Verification</h3>
+                <span class="status-pill-verified">
+                  <span class="pulse-dot" style="width: 6px; height: 6px; margin: 0;" aria-hidden="true"></span>
+                  <span>VERIFIED ACTIVE</span>
+                </span>
+              </div>
             </div>
-            <div>
-              <h3>AdMob &amp; Store Verification</h3>
-              <p style="margin: 0; font-size: 0.8rem; color: #10b981; font-weight: 700;">VERIFIED ACTIVE</p>
+            <p class="compliance-desc">
+              This domain is the authorized official developer website for Krishna Tech Hub's Google Play Console profile and hosts verified <code>app-ads.txt</code> inventory records for authorized crawler validation.
+            </p>
+            <div class="admob-pub-strip">
+              <div class="pub-id-group">
+                <span class="pub-label">Google AdMob Publisher ID</span>
+                <span class="pub-id-code">pub-5378252094188023</span>
+              </div>
+              <span class="pub-badge-direct">DIRECT</span>
             </div>
           </div>
-          <p>
-            This domain is the authorized official developer website for Krishna Tech Hub's Google Play Console profile and hosts verified <code>app-ads.txt</code> inventory records.
-          </p>
           <div>
-            <a href="app-ads.txt" target="_blank" class="code-badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              <span>View app-ads.txt Specification ↗</span>
+            <a href="app-ads.txt" target="_blank" class="action-btn-compliance">
+              <span style="display: flex; align-items: center; gap: 8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <span>View app-ads.txt Specification</span>
+              </span>
+              <svg class="action-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
             </a>
           </div>
         </div>
 
         <div class="compliance-card" id="support">
-          <div class="compliance-header">
-            <div class="compliance-icon" aria-hidden="true" style="color: #60a5fa; background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.25);">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <div class="compliance-header">
+              <div class="compliance-icon-support" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="compliance-header-text">
+                <h3>Contact &amp; Support</h3>
+                <span class="status-pill-support">
+                  <span class="support-dot" aria-hidden="true"></span>
+                  <span>Direct Developer Inquiries</span>
+                </span>
+              </div>
             </div>
-            <div>
-              <h3>Contact &amp; Support</h3>
-              <p style="margin: 0; font-size: 0.8rem; color: #94a3b8; font-weight: 600;">Direct Developer Inquiries</p>
-            </div>
+            <p class="compliance-desc">
+              Have questions, feedback, or need technical assistance with any of our applications? Contact developer support directly or track issues publicly on GitHub.
+            </p>
           </div>
-          <p>
-            Have feedback, feature suggestions, or need assistance with any of our apps? Reach out directly via email or report an issue on GitHub.
-          </p>
-          <div style="display: flex; flex-direction: column; gap: 10px;">
-            <a href="mailto:krishnatechhub@gmail.com" class="code-badge" style="color: #e2e8f0; width: fit-content;">
-              <span>✉</span>
-              <strong>krishnatechhub@gmail.com</strong>
+          <div class="support-buttons-group">
+            <a href="mailto:krishnatechhub@gmail.com" class="support-pill-email">
+              <div class="email-left">
+                <div class="email-icon-box" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="email-text-box">
+                  <span class="email-label">Official Support Email</span>
+                  <span class="email-address">krishnatechhub@gmail.com</span>
+                </div>
+              </div>
+              <span class="email-action-tag">Send Email ↗</span>
             </a>
-            <a href="https://github.com/krishna492007/krishna492007.github.io/issues" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; color: var(--accent-blue); font-weight: 600;">
-              Submit an issue on GitHub Repository ↗
+            <a href="https://github.com/krishna-techhub/krishna-techhub.github.io/issues" target="_blank" rel="noopener noreferrer" class="support-btn-github">
+              <div class="github-btn-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>Report Issue or Feedback on GitHub</span>
+              </div>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
             </a>
           </div>
         </div>
@@ -1320,17 +2019,21 @@
       <div class="footer-top">
         <div class="footer-brand-col">
           <div class="brand">
-            <div class="brand-icon" aria-hidden="true">
-              <img src="assets/images/dev_web/header-k-icon.png" alt="Krishna Tech Hub">
-            </div>
-            <div class="brand-meta">
+            <a href="assets/brand/krishna-tech-hub-neon-logo.png" target="_blank" class="brand-icon logo-trigger" aria-label="Open Krishna Tech Hub Official Logo" title="Click to view Krishna Tech Hub Official Logo">
+              <img src="assets/brand/header-k-icon.png" alt="Krishna Tech Hub">
+            </a>
+            <a href="#top" class="brand-meta" aria-label="Krishna Tech Hub Homepage">
               <span class="brand-title">Krishna Tech Hub</span>
               <span class="brand-subtitle">Official Developer Hub</span>
-            </div>
+            </a>
           </div>
           <p class="footer-desc">
             Independent mobile software developer building fast, private, and offline-first tools for Android.
           </p>
+          <div class="footer-badge">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span>All Systems &amp; Policies Active</span>
+          </div>
         </div>
 
         <div class="footer-links-group">
@@ -1344,21 +2047,22 @@
           </div>
 
           <div class="footer-col">
-            <h5>Privacy Policies</h5>
+            <h5>Privacy &amp; Terms</h5>
             <ul class="footer-links-list">
               <li><a href="pdf-hub-privacy-policy.html">PDF Hub Privacy</a></li>
               <li><a href="qr-hub-privacy-policy.html">QR Hub Privacy</a></li>
-              <li><a href="scrollcount-privacy-policy.html">ScrollCount Privacy</a></li>
               <li><a href="qr-hub-terms.html">QR Hub Terms of Use</a></li>
+              <li><a href="scrollcount-privacy-policy.html">ScrollCount Privacy</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
-            <h5>Legal &amp; Compliance</h5>
+            <h5>Developer &amp; Links</h5>
             <ul class="footer-links-list">
               <li><a href="app-ads.txt" target="_blank">app-ads.txt</a></li>
+              <li><a href="https://github.com/krishna-techhub" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
               <li><a href="#standards">Our Standards</a></li>
-              <li><a href="mailto:krishnatechhub@gmail.com">Support Inquiries</a></li>
+              <li><a href="mailto:krishnatechhub@gmail.com">Developer Support</a></li>
             </ul>
           </div>
         </div>
@@ -1368,12 +2072,38 @@
         <div>
           © <span id="current-year">2026</span> Krishna Tech Hub. All rights reserved.
         </div>
-        <div>
-          Hosted on GitHub Pages • Optimized for Google Play Developer Standards
+        <div class="footer-bottom-badge">
+          <span>Hosted on GitHub Pages</span>
+          <span>•</span>
+          <span>Google Play Developer Standards</span>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Logo Lightbox Modal -->
+  <div class="logo-modal-backdrop" id="logoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="logoModalTitle">
+    <div class="logo-modal-card">
+      <button type="button" class="logo-modal-close" id="logoModalClose" aria-label="Close Logo Preview">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="logo-modal-image-wrap">
+        <img src="assets/brand/krishna-tech-hub-neon-logo.png" alt="Krishna Tech Hub Neon Logo" id="logoModalImg">
+      </div>
+      <h3 class="logo-modal-title" id="logoModalTitle">Krishna Tech Hub</h3>
+      <p class="logo-modal-subtitle">Official Developer Brand Emblem</p>
+      <div class="logo-modal-actions">
+        <a href="assets/brand/krishna-tech-hub-neon-logo.png" target="_blank" rel="noopener noreferrer" class="logo-modal-btn logo-modal-btn-primary" id="logoModalOpenBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <span>Open Full Image</span>
+        </a>
+        <a href="assets/brand/krishna-tech-hub-neon-logo.png" download="krishna-tech-hub-logo.png" class="logo-modal-btn logo-modal-btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Download Asset</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script>
     // Set dynamic current year in footer
@@ -1381,6 +2111,81 @@
     if (yearElem) {
       yearElem.textContent = new Date().getFullYear();
     }
+
+    // Logo Modal Functionality
+    const logoModal = document.getElementById('logoModal');
+    const logoModalClose = document.getElementById('logoModalClose');
+
+    function openLogoModal(e) {
+      if (e) {
+        // Allow ctrl+click or middle click to open image file normally
+        if (e.ctrlKey || e.metaKey || e.button === 1) return;
+        e.preventDefault();
+      }
+      if (logoModal) {
+        logoModal.classList.add('active');
+        logoModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeLogoModal() {
+      if (logoModal) {
+        logoModal.classList.remove('active');
+        logoModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.querySelectorAll('.logo-trigger').forEach((trigger) => {
+      trigger.addEventListener('click', openLogoModal);
+    });
+
+    if (logoModalClose) {
+      logoModalClose.addEventListener('click', closeLogoModal);
+    }
+
+    if (logoModal) {
+      logoModal.addEventListener('click', (e) => {
+        if (e.target === logoModal) {
+          closeLogoModal();
+        }
+      });
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && logoModal && logoModal.classList.contains('active')) {
+        closeLogoModal();
+      }
+    });
+
+    // Interactive App Cards: Click card to open respective app's policy page
+    document.querySelectorAll('.app-card[data-href]').forEach((card) => {
+      card.addEventListener('click', (e) => {
+        // If clicking on store button, direct legal links, or logo trigger, let default link action occur
+        if (e.target.closest('a') || e.target.closest('button')) {
+          return;
+        }
+        const targetUrl = card.getAttribute('data-href');
+        if (targetUrl) {
+          window.location.href = targetUrl;
+        }
+      });
+
+      // Accessibility: Allow Enter and Space keys to navigate
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          if (e.target.closest('a') || e.target.closest('button')) {
+            return;
+          }
+          e.preventDefault();
+          const targetUrl = card.getAttribute('data-href');
+          if (targetUrl) {
+            window.location.href = targetUrl;
+          }
+        }
+      });
+    });
   </script>
 </body>
 </html>

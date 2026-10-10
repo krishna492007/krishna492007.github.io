@@ -12,13 +12,14 @@
   <meta property="og:title" content="PDF Hub Privacy Policy — Krishna Tech Hub">
   <meta property="og:description" content="Official Privacy Policy for PDF Hub (com.pdfhub). 100% local on-device document processing, zero file uploads, zero personal data collection.">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://krishna492007.github.io/pdf-hub-privacy-policy.html">
-  <meta property="og:image" content="https://krishna492007.github.io/assets/images/dev_web/krishna-tech-hub-neon-logo.png">
+  <meta property="og:url" content="https://krishna-techhub.github.io/pdf-hub-privacy-policy.html">
+  <meta property="og:image" content="https://krishna-techhub.github.io/assets/brand/krishna-tech-hub-neon-logo.png">
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/dev_web/favicon-32x32.png">
-  <link rel="apple-touch-icon" href="assets/images/dev_web/header-k-icon.png">
+  <!-- Favicons for PDF Hub -->
+  <link rel="icon" type="image/x-icon" href="assets/apps/pdf-hub/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/apps/pdf-hub/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/apps/pdf-hub/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/apps/pdf-hub/favicons/apple-touch-icon.png">
 
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -292,7 +293,7 @@
       align-items: center;
       gap: 26px;
       flex: 1;
-      min-width: 320px;
+      min-width: 0;
     }
 
     .app-avatar-box {
@@ -994,6 +995,202 @@
         padding: 22px;
       }
     }
+
+    @media (max-width: 480px) {
+      .container {
+        width: calc(100% - 24px);
+      }
+      .policy-header-card {
+        padding: 20px 16px;
+      }
+      .policy-section {
+        padding: 20px 16px;
+      }
+      .policy-title-group h1 {
+        font-size: 1.45rem;
+      }
+      .policy-subtitle {
+        font-size: 0.92rem;
+      }
+      .nav-actions {
+        gap: 8px;
+      }
+      .nav-back-link {
+        padding: 6px 10px;
+        font-size: 0.78rem;
+      }
+      .nav-cta {
+        padding: 6px 10px;
+        font-size: 0.78rem;
+      }
+      .footer-links-group {
+        flex-direction: column;
+        gap: 24px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
+
+    /* Logo Lightbox Modal */
+    .logo-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 6, 10, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+    }
+
+    .logo-modal-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .logo-modal-card {
+      background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(10, 15, 25, 0.98) 100%);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 24px;
+      padding: 38px 32px 32px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 50px -10px rgba(6, 182, 212, 0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transform: scale(0.92);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .logo-modal-backdrop.active .logo-modal-card {
+      transform: scale(1);
+    }
+
+    .logo-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .logo-modal-close:hover {
+      background: rgba(239, 68, 68, 0.2);
+      border-color: rgba(239, 68, 68, 0.4);
+      color: #ffffff;
+      transform: rotate(90deg);
+    }
+
+    .logo-modal-image-wrap {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 22px;
+      box-shadow: 0 0 35px rgba(6, 182, 212, 0.5), inset 0 0 20px rgba(6, 182, 212, 0.3);
+      border: 3px solid rgba(6, 182, 212, 0.6);
+      background: #000000;
+      position: relative;
+    }
+
+    .logo-modal-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .logo-modal-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-modal-subtitle {
+      font-size: 0.85rem;
+      color: #38bdf8;
+      font-weight: 600;
+      margin-bottom: 24px;
+      letter-spacing: 0.04em;
+    }
+
+    .logo-modal-actions {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .logo-modal-btn {
+      flex: 1 1 180px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .logo-modal-btn-primary {
+      background: linear-gradient(135deg, #0284c7, #2563eb);
+      color: #ffffff;
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+    }
+
+    .logo-modal-btn-primary:hover {
+      box-shadow: 0 6px 22px rgba(37, 99, 235, 0.55);
+      transform: translateY(-2px);
+      color: #ffffff;
+    }
+
+    .logo-modal-btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .logo-modal-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .brand-icon.logo-trigger {
+      cursor: pointer;
+    }
+
+    .brand-icon.logo-trigger:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 24px rgba(56, 189, 248, 0.65);
+    }
   </style>
 </head>
 <body>
@@ -1003,15 +1200,15 @@
   <!-- Header Navigation -->
   <header class="header">
     <div class="container nav-container">
-      <a href="index.html" class="brand" aria-label="Krishna Tech Hub Homepage">
-        <div class="brand-icon" aria-hidden="true">
-          <img src="assets/images/dev_web/header-k-icon.png" alt="Krishna Tech Hub">
-        </div>
-        <div class="brand-meta">
+      <div class="brand">
+        <a href="assets/brand/krishna-tech-hub-neon-logo.png" target="_blank" class="brand-icon logo-trigger" aria-label="Open Krishna Tech Hub Official Logo" title="Click to view Krishna Tech Hub Official Logo">
+          <img src="assets/brand/header-k-icon.png" alt="Krishna Tech Hub">
+        </a>
+        <a href="index.html" class="brand-meta" aria-label="Krishna Tech Hub Homepage">
           <span class="brand-title">Krishna Tech Hub</span>
           <span class="brand-subtitle">Official Developer Hub</span>
-        </div>
-      </a>
+        </a>
+      </div>
 
       <div class="nav-actions">
         <a href="index.html" class="nav-back-link">
@@ -1044,7 +1241,7 @@
         <div class="policy-header-content">
           <div class="policy-header-main">
             <div class="app-avatar-box">
-              <img src="assets/images/pdf-hub-icon.png" alt="PDF Hub App Icon">
+              <img src="assets/apps/pdf-hub/icon.png" alt="PDF Hub App Icon">
             </div>
             <div class="policy-title-group">
               <h1>
@@ -1126,7 +1323,7 @@
           </div>
           <div class="sidebar-app-box">
             <div class="sidebar-app-icon">
-              <img src="assets/images/pdf-hub-icon.png" alt="PDF Hub Icon">
+              <img src="assets/apps/pdf-hub/icon.png" alt="PDF Hub Icon">
             </div>
             <div class="sidebar-app-info">
               <h5>PDF Hub Android</h5>
@@ -1527,7 +1724,7 @@
               <div class="contact-icon">🌐</div>
               <div class="contact-details">
                 <h4>Official Website</h4>
-                <a href="https://krishna492007.github.io/">krishna492007.github.io</a>
+                <a href="https://krishna-techhub.github.io/">krishna-techhub.github.io</a>
               </div>
             </div>
 
@@ -1551,15 +1748,15 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand-col">
-          <a href="index.html" class="brand">
-            <div class="brand-icon">
-              <img src="assets/images/dev_web/header-k-icon.png" alt="Krishna Tech Hub">
-            </div>
-            <div class="brand-meta">
+          <div class="brand">
+            <a href="assets/brand/krishna-tech-hub-neon-logo.png" target="_blank" class="brand-icon logo-trigger" aria-label="Open Krishna Tech Hub Official Logo" title="Click to view Krishna Tech Hub Official Logo">
+              <img src="assets/brand/header-k-icon.png" alt="Krishna Tech Hub">
+            </a>
+            <a href="index.html" class="brand-meta" aria-label="Krishna Tech Hub Homepage">
               <span class="brand-title">Krishna Tech Hub</span>
               <span class="brand-subtitle">Official Developer Hub</span>
-            </div>
-          </a>
+            </a>
+          </div>
           <p class="footer-desc">
             Building privacy-first, blazing fast Android utilities. Native performance, sandboxed offline architectures, zero tracking.
           </p>
@@ -1589,7 +1786,7 @@
             <h5>Compliance &amp; Trust</h5>
             <ul class="footer-links-list">
               <li class="footer-link-item"><a href="app-ads.txt">app-ads.txt (AdMob)</a></li>
-              <li class="footer-link-item"><a href="https://github.com/krishna492007" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
+              <li class="footer-link-item"><a href="https://github.com/krishna-techhub" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
               <li class="footer-link-item"><a href="mailto:krishnatechhub@gmail.com">Developer Support</a></li>
             </ul>
           </div>
@@ -1603,9 +1800,80 @@
     </div>
   </footer>
 
-  <!-- Active TOC Scroll Spy Script -->
+  <!-- Logo Lightbox Modal -->
+  <div class="logo-modal-backdrop" id="logoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="logoModalTitle">
+    <div class="logo-modal-card">
+      <button type="button" class="logo-modal-close" id="logoModalClose" aria-label="Close Logo Preview">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="logo-modal-image-wrap">
+        <img src="assets/brand/krishna-tech-hub-neon-logo.png" alt="Krishna Tech Hub Neon Logo" id="logoModalImg">
+      </div>
+      <h3 class="logo-modal-title" id="logoModalTitle">Krishna Tech Hub</h3>
+      <p class="logo-modal-subtitle">Official Developer Brand Emblem</p>
+      <div class="logo-modal-actions">
+        <a href="assets/brand/krishna-tech-hub-neon-logo.png" target="_blank" rel="noopener noreferrer" class="logo-modal-btn logo-modal-btn-primary" id="logoModalOpenBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <span>Open Full Image</span>
+        </a>
+        <a href="assets/brand/krishna-tech-hub-neon-logo.png" download="krishna-tech-hub-logo.png" class="logo-modal-btn logo-modal-btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Download Asset</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Logo Modal Functionality
+      const logoModal = document.getElementById('logoModal');
+      const logoModalClose = document.getElementById('logoModalClose');
+
+      function openLogoModal(e) {
+        if (e) {
+          if (e.ctrlKey || e.metaKey || e.button === 1) return;
+          e.preventDefault();
+        }
+        if (logoModal) {
+          logoModal.classList.add('active');
+          logoModal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeLogoModal() {
+        if (logoModal) {
+          logoModal.classList.remove('active');
+          logoModal.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }
+      }
+
+      document.querySelectorAll('.logo-trigger').forEach((trigger) => {
+        trigger.addEventListener('click', openLogoModal);
+      });
+
+      if (logoModalClose) {
+        logoModalClose.addEventListener('click', closeLogoModal);
+      }
+
+      if (logoModal) {
+        logoModal.addEventListener('click', (e) => {
+          if (e.target === logoModal) {
+            closeLogoModal();
+          }
+        });
+      }
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && logoModal && logoModal.classList.contains('active')) {
+          closeLogoModal();
+        }
+      });
+
+      // Active TOC Scroll Spy Script
       const sections = document.querySelectorAll('.policy-section');
       const navLinks = document.querySelectorAll('.toc-item');
 
